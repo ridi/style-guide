@@ -61,8 +61,8 @@
   vendor prefix 가 필요한 css 속성들을 주로 mixin 으로 묶어서 사용하고 paging 이나 line_clamp 도 mixin 으로 묶어서 사용한다.
 - 다음의 파일들을 import 하고 있다.
 
-|  |  |  |
-|--|--|--|
+| Import | Description |
+|---|---|
 | @import "colorChips";	| 서점 및 앱에서 사용하는 UX 팀과의 협의에 의해 만들어지는 컬러 변수들 묶음 |
 | @import "base64Image";	| 굳이 파일로 갖고 있지 않아도 되는 자주 사용하는 이미지들을 base64로 변환해서 사용 |
 | @import "fontMixins";	| 웹폰트를 mixin 형태로 미리 정의해놓았다. 특정 폰트를 사용해야 하는 경우 이 파일에 추가하고 해당 페이지 less 에서 mixin 호출해서 사용. 현재 베스트 셀러에서 사용한 순위용 폰트와 리뷰에서 사용하는 점수용 폰트가 정의되어 있다. |
