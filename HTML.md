@@ -108,14 +108,14 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 
 ## Tag 주의사항
 
-|  |  |
---|--|
-div, span | 절대적으로 최소화 해서 사용. -> div 와 span을 남용할 경우 소스의 가독성이 떨어지고 depth가 깊어져 사이트의 성능저하를 일으킨다.
-table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다. caption 또한 가능하면 반드시 넣어준다.
-button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다. button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. 
-img       | alt 를 반드시 넣어준다.
-form요소   | 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다.
-nav       | 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다.
+| Tag | Comment |
+| --- | --- |
+| div, span | 절대적으로 최소화 해서 사용.<br>div 와 span을 남용할 경우 소스의 가독성이 떨어진다. |
+| table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다.<br>caption 또한 가능하면 반드시 넣어준다. |
+| button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다.<br>button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. |
+| img       | alt 를 반드시 넣어준다. |
+| form요소   | 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다. |
+| nav       | 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다. |
 
 
 ## Class, ID 네이밍 규칙
