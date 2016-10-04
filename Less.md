@@ -11,10 +11,12 @@
 - 속성은 가능하면 줄여서 사용
 - 줄임 속성내 순서 및 요소들 반드시 지키기
   - ex)
+  
     ```less
     { background: url(xxx.png) no-repeat; }          // (X)
     { background: url(xxx.png) left top no-repeat; } // (O)
     ```
+    
 - nesting 으로 인해 depth가 깊어질 경우 중괄호 닫아준 뒤 해당 클래스명을 주석으로 적어주는건 자율 (코딩 툴에서 지원하는 기능을 이용하며 최대한 클래스명 주석은 자제한다.)
 - 파일명은 호출될 twig의  파일명을 따르며 앞에 'page_' 를 붙여준다.
 - 모바일일 경우 .less 앞에 .m 추가 / ex) page_base.m.less
