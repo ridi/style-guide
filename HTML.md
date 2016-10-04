@@ -1,4 +1,4 @@
-# HTML / Twig / Jinja2 가이드
+# HTML / Twig / Jinja2 코딩 스타일
 
 ## 웹표준과 웹접근성
 
@@ -18,17 +18,15 @@
 - 각종 Path는 ” 로 묶어준다.
 - image text를 최소화 하기 위해 **24px 이상의 폰트를 사용해야 하는 경우에만 background-image 방법을 사용**
 - div, span, article 등으로 끝나고 바로 뒤에 hr 태그가 붙으면 div, span의 닫는 태그와 붙여서 써준다. 단, 여는 태그와 닫는태그가 한 줄에 있을경우는 예외.
-
-```html
-<div>
-    "Content"
-</div><hr>
- 
-{# 예외상황 #}
-<div></div>
-<hr>
-```
-
+  ```html
+  <div>
+      "Content"
+  </div><hr>
+  
+  {# 예외상황 #}
+  <div></div>
+  <hr>
+  ```
 - attribute 의 네이밍 에는 언더바( _ ) 가 아닌 하이픈 ( - ) 으로 공백 구분하여 네이밍 한다.
   -  data-sample_attribute ( x )
   -  data-sample-attribute ( o )
@@ -95,17 +93,17 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 - header, footer, section, article, nav, aside, div, form, field 등 내용이 그룹화 되는 tag 뒤에는 새로운 빈줄을 추가한다.
 - twig 내의 오브젝트 객체를 set 해주는 경우 아래의 컨벤션을 따른다.
 
-```twig
-{# 프로퍼티가 여러개일 경우 #}
-{% set options = {
-    'key_name': key_value,
-    'key_name': key_value,
-    'key_name': key_value
-} %} 
- 
-{# 단일 프로퍼티일 경우 #}
-{% set options = {'key_name': key_value} %}
-```
+  ```twig
+  {# 프로퍼티가 여러개일 경우 #}
+  {% set options = {
+      'key_name': key_value,
+      'key_name': key_value,
+      'key_name': key_value
+  } %} 
+  
+  {# 단일 프로퍼티일 경우 #}
+  {% set options = {'key_name': key_value} %}
+  ```
 
 
 ## Tag 주의사항
@@ -123,31 +121,32 @@ nav       | 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다.
 ## Class, ID 네이밍 규칙
 
 - 스타일 적용을 위한 class와 ID 는 모두 소문자와 under_score 를 조합하여 만든다.
+
 - JavaScript용 class name은 앞에 'js_'를 붙여 style용 class name과 구분한다.
    (태그가 변경되거나 불필요한 스타일용 클래스가 제거 되어도 기능에 영향을 최대한 적게 주기 위한 방안)
-```css
-.js_series_list (O)
-```
+  ```css
+  .js_series_list (O)
+  ```
     
 - naming은 내용을 기준으로 지정하여 style 과 분리시킨다.
-```css
-.blue_box, .orange_text             (X)
-.header_title, .subcategory_info    (O)
-```
+  ```css
+  .blue_box, .orange_text             (X)
+  .header_title, .subcategory_info    (O)
+  ```
 
 - 네이밍은 재사용성을 위해 최대한 일반화한다.
-```css
-.warning_text_point_consume     (X)
-.warning_text                   (O)
-```
+  ```css
+  .warning_text_point_consume     (X)
+  .warning_text                   (O)
+  ```
 
 - 요소를 감싸고 있는 DOM과 실제 역할을 하는 요소들의 네이밍 통일성을 최대한 맞춰준다.
-```html
-<ul class="element_item_wrapper">
-   <li class="element_item"></li>
-   <li class="element_item"></li>
-</ul>
-```
+  ```html
+  <ul class="element_item_wrapper">
+     <li class="element_item"></li>
+     <li class="element_item"></li>
+  </ul>
+  ```
 
 
 ## 참고

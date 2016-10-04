@@ -1,4 +1,4 @@
-# Less
+# Less 코딩 스타일
 
 ## 문법
 
@@ -77,7 +77,6 @@
 2. ttf, woff 는 base64로 변환, eot 파일은 fonts 폴더에 넣기
 3. less/common/fontMixins.less 에 mixin 추가 - mixin 이름을 정하고, base64로 변환한 ttf, woff 및 eot 파일 경로를 추가
 4. 사용할 페이지의 less 에서 해당 mixin을 정의하면 지정한 class에 폰트가 적용된다.
- 
 
 ```less
 // fontMixins.less
