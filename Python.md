@@ -47,6 +47,7 @@
   - 클래스 내의 메소드 정의는 1줄씩 띄어쓴다.
   - 키워드 인자(keyword argument)와 인자의 기본값(default parameter value)의 = 는 붙여 쓴다.
   - 함수 인자 (아래 둘다 된다., _ 는 공백을 나타낸다.)
+  
     ```
     foo = long_function_name(
     ________var_one, var_two,
@@ -60,6 +61,7 @@
     ________)
     print(var_one)
     ```
+    
 - 클래스
   - 인스턴스 메소드의 첫 번째 인자는 언제나 self 이다.
   - 클래스가 특정 클래스를 상속하지 않으면 object 로 한다.
