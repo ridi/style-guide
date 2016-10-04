@@ -19,7 +19,6 @@
 - image text를 최소화 하기 위해 **24px 이상의 폰트를 사용해야 하는 경우에만 background-image 방법을 사용**
 - div, span, article 등으로 끝나고 바로 뒤에 <hr> 태그가 붙으면 div, span의 닫는 태그와 붙여서 써준다.
  단, 여는 태그와 닫는태그가 한 줄에 있을경우는 예외.
-
 ~~~
 <div>
     "Content"
@@ -95,7 +94,6 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 - block요소들 그리고 CSS의 display가 block 또는 inline-block 으로 지정된 inline 요소 들은 줄바꿈과 들여쓰기를 한다.
 - header, footer, section, article, nav, aside, div, form, field 등 내용이 그룹화 되는 tag 뒤에는 새로운 빈줄을 추가한다.
 - twig 내의 오브젝트 객체를 set 해주는 경우 아래의 컨벤션을 따른다.
-
 ~~~
 {# 프로퍼티가 여러개일 경우 #}
 {% set options = {
@@ -111,12 +109,12 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 
 ## Tag 주의사항
 
-div, span | 절대적으로 최소화 해서 사용. -> div 와 span을 남용할 경우 소스의 가독성이 떨어지고 depth가 깊어져 사이트의 성능저하를 일으킨다.
-table | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다. caption 또한 가능하면 반드시 넣어준다.
-button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다. button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. 
-img	| alt 를 반드시 넣어준다.
-form요소	| 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다.
-nav	| 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다.
+| div, span | 절대적으로 최소화 해서 사용. -> div 와 span을 남용할 경우 소스의 가독성이 떨어지고 depth가 깊어져 사이트의 성능저하를 일으킨다. |
+| table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다. caption 또한 가능하면 반드시 넣어준다. |
+| button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다. button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. | 
+| img       | alt 를 반드시 넣어준다. |
+| form요소	| 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다. |
+| nav       | 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다. |
 
 
 ## Class, ID 네이밍 규칙
@@ -148,9 +146,6 @@ nav	| 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다.
 </ul>
 ~~~
 
-
-
----
 
 ## 참고
 
