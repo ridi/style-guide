@@ -94,6 +94,7 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 - block요소들 그리고 CSS의 display가 block 또는 inline-block 으로 지정된 inline 요소 들은 줄바꿈과 들여쓰기를 한다.
 - header, footer, section, article, nav, aside, div, form, field 등 내용이 그룹화 되는 tag 뒤에는 새로운 빈줄을 추가한다.
 - twig 내의 오브젝트 객체를 set 해주는 경우 아래의 컨벤션을 따른다.
+
 ~~~
 {# 프로퍼티가 여러개일 경우 #}
 {% set options = {
