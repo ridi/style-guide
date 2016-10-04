@@ -17,8 +17,7 @@
 - style 을 HTML tag에 inline으로 넣지 않는다.
 - 각종 Path는 ” 로 묶어준다.
 - image text를 최소화 하기 위해 **24px 이상의 폰트를 사용해야 하는 경우에만 background-image 방법을 사용**
-- div, span, article 등으로 끝나고 바로 뒤에 <hr> 태그가 붙으면 div, span의 닫는 태그와 붙여서 써준다.
- 단, 여는 태그와 닫는태그가 한 줄에 있을경우는 예외.
+- div, span, article 등으로 끝나고 바로 뒤에 hr 태그가 붙으면 div, span의 닫는 태그와 붙여서 써준다. 단, 여는 태그와 닫는태그가 한 줄에 있을경우는 예외.
 ~~~
 <div>
     "Content"
