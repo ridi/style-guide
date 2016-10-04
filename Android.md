@@ -3,7 +3,8 @@
 
 ## Kotlin 코딩 스타일
 
-Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference/coding-conventions.html)을 따른다.
+Kotlin 공식 문서의 [Coding Convention](http://
+lang.org/docs/reference/coding-conventions.html)을 따른다.
 이 외에 차이점이나 추가 사항은 아래와 같다.
 
 ### 네이밍
@@ -17,7 +18,8 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
 - 타입과 슈퍼타입 사이에서 구분이 필요할 경우에는 콜론 앞뒤로 공백을 한 칸 넣고,
 - 인스턴스와 타입 사이에서 구분이 필요할 경우에는 콜론의 뒤에만 공백을 한 칸 넣는다.
 - ex.
-  ```kotlin
+
+  ```kt
   class Foo : Bar { /*...*/ }
   fun foo(a: Int): Bar { /*...*/ }
   ```
@@ -26,7 +28,8 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
 - 함수가 특별히 쓸모 있는 값을 리턴하지 않을 경우, Unit 타입을 리턴한다.
 - 하지만 그럴 경우에 Kotlin이 알아서 Unit을 리턴하기 때문에, 굳이 코드에는 명시하지 않는다.
 - ex.
-  ```kotlin
+
+  ```kt
   fun foo(a: Int) { // 1. ': Unit'
       println(a)
       // 2. 'return Unit' 혹은 'return'
