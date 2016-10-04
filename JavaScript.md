@@ -4,7 +4,7 @@
 
 [Airbnb의 자바스크립트 스타일 가이드](https://github.com/airbnb/javascript/blob/master/README.md)를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용한다.
 
-```
+```javascript
 module.exports = {
   "extends": "airbnb",
   "rules": {

@@ -19,7 +19,7 @@
 - image text를 최소화 하기 위해 **24px 이상의 폰트를 사용해야 하는 경우에만 background-image 방법을 사용**
 - div, span, article 등으로 끝나고 바로 뒤에 hr 태그가 붙으면 div, span의 닫는 태그와 붙여서 써준다. 단, 여는 태그와 닫는태그가 한 줄에 있을경우는 예외.
 
-~~~ html
+```html
 <div>
     "Content"
 </div><hr>
@@ -27,7 +27,7 @@
 {# 예외상황 #}
 <div></div>
 <hr>
-~~~
+```
 
 - attribute 의 네이밍 에는 언더바( _ ) 가 아닌 하이픈 ( - ) 으로 공백 구분하여 네이밍 한다.
   -  data-sample_attribute ( x )
@@ -49,7 +49,7 @@
 meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅에서 해당 블럭을 상속받으려는 경우
 {{ parent() }} 를 선언 해준다.
 
-~~~
+```twig
 {% block meta %}
   // 메타 태그 영역
 {% endblock %}
@@ -73,19 +73,19 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 {% block bottomscript %}
  // body 내부에서 가장 최하단에 들어갈 스크립트 영역 ( 리액트 등에서 사용 )
 {% endblock bottomscript %}
-~~~
+```
 
 ### if 를 사용할때 조건이 길어져서 줄바꿈을 하는 경우에는 or, and 등의 비교 연산자를 줄의 가장 앞에 오도록 선언한다.
 
 예시) 
-~~~
+```twig
 {% if example_a == 1
       or example_b == 2
       and example_c == 3 %}
 // code
 
 {% endif %}
-~~~
+```
 
 
 ### 줄바꿈과 들여쓰기
@@ -95,7 +95,7 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 - header, footer, section, article, nav, aside, div, form, field 등 내용이 그룹화 되는 tag 뒤에는 새로운 빈줄을 추가한다.
 - twig 내의 오브젝트 객체를 set 해주는 경우 아래의 컨벤션을 따른다.
 
-~~~
+```twig
 {# 프로퍼티가 여러개일 경우 #}
 {% set options = {
     'key_name': key_value,
@@ -105,17 +105,19 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
  
 {# 단일 프로퍼티일 경우 #}
 {% set options = {'key_name': key_value} %}
-~~~
+```
 
 
 ## Tag 주의사항
 
-| div, span | 절대적으로 최소화 해서 사용. -> div 와 span을 남용할 경우 소스의 가독성이 떨어지고 depth가 깊어져 사이트의 성능저하를 일으킨다. |
-| table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다. caption 또한 가능하면 반드시 넣어준다. |
-| button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다. button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. | 
-| img       | alt 를 반드시 넣어준다. |
-| form요소	| 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다. |
-| nav       | 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다. |
+|  |  |
+--|--|
+div, span | 절대적으로 최소화 해서 사용. -> div 와 span을 남용할 경우 소스의 가독성이 떨어지고 depth가 깊어져 사이트의 성능저하를 일으킨다.
+table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다. caption 또한 가능하면 반드시 넣어준다.
+button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다. button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. 
+img       | alt 를 반드시 넣어준다.
+form요소   | 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다.
+nav       | 사이트 최상위 메뉴(GNB 영역)에 한번만 사용한다.
 
 
 ## Class, ID 네이밍 규칙
@@ -123,29 +125,29 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 - 스타일 적용을 위한 class와 ID 는 모두 소문자와 under_score 를 조합하여 만든다.
 - JavaScript용 class name은 앞에 'js_'를 붙여 style용 class name과 구분한다.
    (태그가 변경되거나 불필요한 스타일용 클래스가 제거 되어도 기능에 영향을 최대한 적게 주기 위한 방안)
-~~~
+```css
 .js_series_list (O)
-~~~
+```
     
 - naming은 내용을 기준으로 지정하여 style 과 분리시킨다.
-~~~
+```css
 .blue_box, .orange_text             (X)
 .header_title, .subcategory_info    (O)
-~~~
+```
 
 - 네이밍은 재사용성을 위해 최대한 일반화한다.
-~~~
+```css
 .warning_text_point_consume     (X)
 .warning_text                   (O)
-~~~
+```
 
 - 요소를 감싸고 있는 DOM과 실제 역할을 하는 요소들의 네이밍 통일성을 최대한 맞춰준다.
-~~~
+```html
 <ul class="element_item_wrapper">
    <li class="element_item"></li>
    <li class="element_item"></li>
 </ul>
-~~~
+```
 
 
 ## 참고
