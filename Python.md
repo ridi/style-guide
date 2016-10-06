@@ -3,6 +3,7 @@
 코드 규약은 [PEP8](https://www.python.org/dev/peps/pep-0008/)과 [Google의 스타일 가이드](https://google.github.io/styleguide/pyguide.html)를 최대한 따른다.
 위 가이드에서 중요한 부분이나 언급되지 않은 부분 그리고 서로 상충되는 부분은 따로 아래에 기술한다.
 
+<!--
 ## 추가 규칙
 - 리스트, 튜플, 딕셔너리 사용시 마지막에 , 를 붙인다.
   - 이유는 데이터 추가시 Diff 보기 편하다.
@@ -31,6 +32,7 @@
     def CUSTOMER():
       return 'customer'
   ```
+-->
 
 ## 변경 규칙
 - 1행에 120자까지 사용한다.
@@ -84,7 +86,17 @@
   - module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.
 
 
-## PyCharm 
+## Pylint
+
+Pylint 설치
+`pip3 install pylint`
+
+Pylint 설치 위치 확인
+`which pylint`
+
+
+## PyCharm
+
 - Preferences > Editor
   - Code Style
     - Line separator (for new files): Unix and OS X (\n)
@@ -92,3 +104,10 @@
   - Code Style > Python >  Other
     - (check) Add line feed at the end of file
     - (check) Use continuation indent for arguments
+
+- Preferences > External Tools
+  - + 버튼을 눌러서 Pylint 추가
+    - Name: Pylint
+    - Program: which 로 찾은 경로 입력
+    - Parameters: $FilePath$
+  - Tools > External Tools > Pylin 체크되어 있는지 확인
