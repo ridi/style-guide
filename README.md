@@ -1,6 +1,6 @@
 # RIDI Coding Style Guide
 
-- [Android](Android.md) - Kotline, Java, XML 코딩 스타일
+- [Android](Android.md) - Kotlin, Java, XML 코딩 스타일
 - [iOS](iOS.md) - Swift, Objective-C 코딩 스타일
 - [HTML](HTML.md) - HTML, Twig/Jinja2 코딩 스타일
 - [JavaScript](JavaScript.md)
