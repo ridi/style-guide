@@ -25,6 +25,10 @@
 - sp_로 시작하며 소문자 snake_case 사용
 
 
+### 뷰 규칙
+- v_로 시작하며 소문자 snake_case 사용
+
+
 ### 컬럼 규칙
 
 - 소문자 snake_case 를 사용
