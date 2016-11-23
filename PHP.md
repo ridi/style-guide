@@ -17,11 +17,11 @@
     - Line separator (for new files): Unix and OS X (\n)
     - Right Margin (columns) : 120
   - Code Style > PHP > Tabs and Indents
-    - (check) Use tab character
+    - ✅ Use tab character
   - Code Style > PHP > Other
-    - (check) Force short declaration style
+    - ✅ Force short declaration style
   - General > Other
-    - (check) Ensure line feed at file end on Save
+    - ✅ Ensure line feed at file end on Save
     
 ## 버전
 - PHP 버전은 **7.0**를 기준으로 한다.
@@ -55,11 +55,11 @@
  
 - Preferences > Editor > Inspections
   - PHP
-    - Code Style
-      - Class path doesn't match project structure ✅
+    - Code Style 
+      - ✅ Class path doesn't match project structure
     - Probable bugs
-      - Assignment in condition ✅
-      - Division by zero ✅
+      - ✅ Assignment in condition
+      - ✅ Division by zero
 
 
 ## 코딩 스타일
