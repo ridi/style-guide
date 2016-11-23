@@ -57,6 +57,9 @@
   - PHP
     - Code Style
       - **(check) Class path doesn't match project structure** 
+    - Probable bugs
+      - **(check) Assignment in condition**
+      - **(check) Division by zero**
 
 
 ## 코딩 스타일
