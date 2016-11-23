@@ -10,6 +10,15 @@
   - 파일 끝에는 빈줄을 반드시 추가
 
 
+## 버전
+- PHP 버전은 **7.0**를 기준으로 한다.
+    - PhpStorm > Preferences > PHP > PHP Language Level > 7.0 선택 > Apply
+    - __하위 버전 호환은 고려하지 않는다.__
+- 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용하도록 한다.
+    - try ~ catch ~ finally, short array syntax, trait 등
+    - Type Hinting 은 최대한 활용
+
+
 ## PhpStorm 사용시
 - PSR/PSR2 설정 : Preferences > Editor > Code Style > PHP > Set from… > PSR1/PSR2 선택
 - Preferences > Editor
@@ -23,15 +32,6 @@
   - General > Other
     - ✅ Ensure line feed at file end on Save
     
-## 버전
-- PHP 버전은 **7.0**를 기준으로 한다.
-    - PhpStorm > Preferences > PHP > PHP Language Level > 7.0 선택 > Apply
-    - __하위 버전 호환은 고려하지 않는다.__
-- 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용하도록 한다.
-    - try ~ catch ~ finally, short array syntax, trait 등
-    - Type Hinting 은 최대한 활용
-      - https://blog.jetbrains.com/phpstorm/2016/07/php-7-support-in-phpstorm-2016-2/
- 
 ## Inspections
 - 오류와 경고를 최대한 해결하고, 커밋 전 Reformat Code 수행
 - PHP CodeSniffer 사용
@@ -63,6 +63,10 @@
 
 
 ## 코딩 스타일
+
+- 타입 지정
+ - PHP 7의 타입 힌팅 기능을 우선적으로 사용
+ - Nullable 표현이 필요한 경우에는 PhpDocs 기능을 사용
 
 - == / === 의 사용
  - 가능한 모든 경우에 ===를 사용, 그렇지 않을 경우에만 ==를 사용.
@@ -147,3 +151,5 @@
 ## 기타 참고할 만한 문서
 - http://www.phptherightway.com
   - 코딩 스타일 이외에 개발/보안/프로젝트 관리/배포 등과 관련된 지침서 (필독)
+- https://blog.jetbrains.com/phpstorm/2016/07/php-7-support-in-phpstorm-2016-2/
+  - Type Hinting
