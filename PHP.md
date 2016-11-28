@@ -149,7 +149,6 @@
 
 
 ## 기타 참고할 만한 문서
-- http://www.phptherightway.com
-  - 코딩 스타일 이외에 개발/보안/프로젝트 관리/배포 등과 관련된 지침서 (필독)
-- https://blog.jetbrains.com/phpstorm/2016/07/php-7-support-in-phpstorm-2016-2/
-  - Type Hinting
+- **[코딩 스타일 이외에 개발/보안/프로젝트 관리/배포 등과 관련된 지침서](http://www.phptherightway.com)**
+- [Type Hinting in PhpStorm](https://blog.jetbrains.com/phpstorm/2016/07/php-7-support-in-phpstorm-2016-2/)
+- [Modern PHP](http://www.slideshare.net/wan2land/modern-php-64855200)
