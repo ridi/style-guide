@@ -3,11 +3,12 @@
 **[PSR1/PSR2](http://www.php-fig.org/)** 규칙을 기본으로 하되 다음 규칙을 오버라이딩하여 따른다.
 
 - 수정된 규칙
-  - 들여쓰기 : space(4) 대신 Tab 문자를 사용
-  - line length는 soft limit(120 characters per line)을 따름
-- 추가된 규칙
-  - Line separator는 LF(Unix, \n)을 사용
-  - 파일 끝에는 빈줄을 반드시 추가
+  - [2.3 Lines](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#23-lines)
+    - line length는 soft limit(120 characters per line)을 따름
+  - [2.4 Indenting](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#24-indenting)
+    - space(4) 대신 Tab 문자를 사용
+  - [3](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-use-declarations)
+    - declare 구분의 '=' 좌우에 공백을 삽입
 
 
 ## 버전
