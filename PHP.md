@@ -9,7 +9,7 @@
   - [2.4 Indenting](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#24-indenting)
     - space(4) 대신 Tab 문자를 사용
   
-  - [3](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-use-declarations)
+  - [3. Declare Statements, Namespace, and Use Declarations](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-use-declarations)
     - declare 구분의 '=' 좌우에 공백을 삽입
 
 
