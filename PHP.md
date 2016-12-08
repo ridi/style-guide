@@ -2,12 +2,14 @@
 
 **[PSR1/PSR2](http://www.php-fig.org/)** 규칙을 기본으로 하되 다음 규칙을 오버라이딩하여 따른다.
 
-- 수정된 규칙
+## 수정된 규칙
   - [2.3 Lines](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#23-lines)
     - line length는 soft limit(120 characters per line)을 따름
-  - [2.4 Indenting](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#24-indenting)
+  
+  - [2.4 Indenting](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#24-indenting)
     - space(4) 대신 Tab 문자를 사용
-  - [3](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-use-declarations)
+  
+  - [3](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-use-declarations)
     - declare 구분의 '=' 좌우에 공백을 삽입
 
 
