@@ -68,3 +68,120 @@
       doSomething();
   }
   ```
+
+
+## 리소스 네이밍 규칙
+
+- 소문자만 사용한다
+- 공백은 언더스코어(_)로 대체한다
+- 접두어에는 폴더명, 컴포넌트명, 디자인 고유명이 있다
+- 각 접두어는 언더스코어로 구분된다
+- 여러 접두어를 사용할 경우 '폴더명', '컴포넌트명', '디자인 고유명' 순으로 사용한다
+- 폴더명은 리소스가 속하는 뷰나 기능을 의미한다
+    - share : 멋지게 공유하기 리소스
+    - welcome : 월컴뷰 리소스
+    - reader : 뷰어 리소스
+- 폴더명은 상위 폴더명까지 포함한다
+    - X) resources/reader/typo/*.png -> typo_xxx.png
+    - O) resources/reader/typo/*.png -> reader_typo_xxx.png
+    - O) resources/main/*.png -> main_xxx.png
+    - O) resources/*.png -> xxx.png
+- 폴더명이 없는 경우는 공용 리소스를 의미한다
+- 폴더명은 언더스코어 없이 붙여 쓴다
+- 컴포넌트명은 HIG에서 언급하는 UI Controls, UI Bars를 짧게 표현한 것이다
+    - navbar
+    - tabbar
+    - toolbar
+    - searchbar
+    - bar
+    - control
+    - btn
+    - switch
+    - stepper
+    - slider
+    - spinner
+- 컴포넌트명도 언더스코어 없이 붙여 쓴다
+- 디자인 고유명은 아이콘이나 로고와 같이 디자인에서 통상적으로 쓰이는 고유명사이다 
+    - icon
+    - logo
+    - bg
+- 접미어에는 색상이나 크기, 위치, 순번, 테마, 상태, 디자인 고유명이 있다
+    - 색상 : reader_color_***black***.png
+    - 크기 : welcome_logo_***large***.png
+    - 위치 : selection_arrow_***left***.png
+    - 순번 : customfont_tutorial_***1***.png
+    - 테마 : icon_pagination_left_***d***.png
+    - 상태 : icon_freebook_***on***.png
+    - 디자인 고유명 : readingnote_bookmark_***bg***.png
+- 접미어 순서는 재량이다
+- 테마 접미어에는 'd'와 생략이 있다
+    - d : 다크 테마
+    - 생략 : 화이트 테마
+- 상태 접미어에는 되도록 다음 항목만 사용한다
+    - normal
+    - highlighted
+        - X) pressed
+    - selected
+        - X) checked
+    - disabled
+    - on
+    - off
+- 위 항목과 유사한 의미가 아니라면 상태 접미어로 쓸 수 있다
+    - bookmarked
+    - closed
+- 예시들
+	- main_searchbar_icon_clear_d.png
+	- main_tabbar_icon_settings.png
+	- main_library_btn_recent_list.png
+	- main_library_icon_download.png
+	- main_cloud_navbar_search.png
+	- reader_typo_btn_color_darkgray_selected.png
+	- reader_typo_stepper_plus.png
+	- reader_slider_thumb.png
+	- reader_bar_listen_label@2x.png
+	- reader_rating_divider.png
+	- reader_tts_icon_arrow_up.png
+	- reader_shadow.png
+	- share_bg_10.jpg
+	- share_btn_sns_insta.png
+	- shortcut_icon_recent_book.png
+	- webview_bar_icon_refresh.png
+	- welcome_btn_login_highlighted.png
+	- welcome_logo_large.png
+
+
+## 애플 리소스 네이밍 규칙
+
+- 접미어에 orientaion, screenHeight, rate, interfaceIdiom이 있다
+- 각 접미어는 상황에 맞춰 선택적으로 쓰이며 쓸 때는 알맞는 접두어를 사용해야 한다
+    - ***-***[orientaion]
+    - ***-***[screenHeight]
+    - ***@***[rate]
+    - ***~***[interfaceIdiom]
+- 접미어는 위에서 언급한 순서대로 사용되어야 한다
+    X) name-[rate]-[orientaion]
+    X) name-[interfaceIdiom]-[rate]
+    O) name-[screenHeight]-[rate]
+- orientaion은 특정 회전 상태에만 쓰일 수 있도록 하는 접미어다
+    - name-***P***ortrait.png     // 세로 모드에서만 사용
+    - name-***L***andscape.png    // 가로 모드에서만 사용
+    - name.png              // 생략했을 때는 모든 회전 상태에서 사용함을 의미
+- screenHeight는 아이폰 크기가 파편화되면서 생긴 것으로 특정 크기에만 쓰일 수 있도록 하는 접미어다
+    - name-568h.png         // 3.5~4.0인치에서만 사용
+    - name-667h.png         // 4.7인치에서만 사용
+    - name-736h.png         // 5.5인치에서만 사용
+    - name.png              // 생략했을 때는 모든 크기에서 사용함을 의미
+- rate는 특정 화면 배율에서 쓰일 수 있도록 하는 접미어다
+    - name@3x.png           // 3x에서 사용
+    - name@2x.png           // 2x에서 사용
+    - name.png              // 생략했을 때는 1x에서 사용함을 의미
+- interfaceIdiom은 특정 디바이스(iPhone/iPod, iPad)에서만 쓰일 수 있도록 하는 접미어다
+    - name~ipad.png         // iPad에서만 사용
+    - name~iphone.png       // iPhone/iPod에서만 사용
+    - name.png              // 생략했을 때는 모든 디버이스에서 사용함을 의미
+- 예시들
+	- reader_paper_bg@2x.png
+	- memo_bg_2-Landscape@2x.png
+	- memo_bg_2-Landscape-667h@2x.png
+	- shelf_new_tag~ipad.png
+
