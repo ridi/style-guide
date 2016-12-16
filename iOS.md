@@ -70,7 +70,9 @@
   ```
 
 
-## 리소스 네이밍 규칙
+# 네이밍 규칙
+
+## 리소스 네이밍
 
 - 소문자만 사용한다
 - 공백은 언더스코어(_)로 대체한다
@@ -138,7 +140,7 @@
 	- reader_typo_btn_color_darkgray_selected.png
 	- reader_typo_stepper_plus.png
 	- reader_slider_thumb.png
-	- reader_bar_listen_label@2x.png
+	- reader_bar_listen_label.png
 	- reader_rating_divider.png
 	- reader_tts_icon_arrow_up.png
 	- reader_shadow.png
@@ -150,7 +152,7 @@
 	- welcome_logo_large.png
 
 
-## 애플 리소스 네이밍 규칙
+## 애플 리소스 네이밍
 
 - 접미어에 orientaion, screenHeight, rate, interfaceIdiom이 있다
 - 각 접미어는 상황에 맞춰 선택적으로 쓰이며 쓸 때는 알맞는 접두어를 사용해야 한다
