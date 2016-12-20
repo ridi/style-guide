@@ -107,14 +107,13 @@
     - icon
     - logo
     - bg
-- 접미어에는 색상이나 크기, 위치, 순번, 테마, 상태, 디자인 고유명이 있다
+- 접미어에는 색상이나 크기, 위치, 순번, 테마, 상태가 있다
     - 색상 : reader_color_***black***.png
     - 크기 : welcome_logo_***large***.png
     - 위치 : selection_arrow_***left***.png
     - 순번 : customfont_tutorial_***1***.png
     - 테마 : icon_pagination_left_***d***.png
     - 상태 : icon_freebook_***on***.png
-    - 디자인 고유명 : readingnote_bookmark_***bg***.png
 - 접미어 순서는 재량이다
 - 테마 접미어에는 'd'와 생략이 있다
     - d : 다크 테마
