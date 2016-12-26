@@ -48,8 +48,6 @@
 
 - Tab size는 4로 하고 space를 사용한다.
 
-- Line length는 100으로 한다.
-
 - Modern Objective-C Syntax를 사용한다. (주의 : nil이 있으면 error)
   ```obj-c
   NSArray *array = [[NSArray alloc] initWithObjects:@"value1", @"value2", nil];
