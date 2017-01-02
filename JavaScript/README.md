@@ -4,17 +4,6 @@
 
 [Airbnb의 자바스크립트 스타일 가이드](https://github.com/airbnb/javascript/blob/master/README.md)를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용한다.
 
-```javascript
-module.exports = {
-  "extends": "airbnb",
-  "rules": {
-    "comma-dangle": 1,          // 줄 마지막 , 는 생략 가능
-    "max-len": [1, 140],        // 행의 최대 길이는 140
-    "no-underscore-dangle": 0,  // 가독성을 위해 private 변수 앞에 _ prefix 붙이기 허용
-  }
-};
-```
-
 
 ## ES6
 
@@ -25,6 +14,7 @@ module.exports = {
 
 정적 분석기로는 Airbnb preset을 제공하는 ESLint 를 사용한다.
 "왜 ESLint 인가?" 에 대해서는 JSLint, JSHint(현재 grunt에서 사용), JSCS 와 [비교글](https://www.sitepoint.com/comparison-javascript-linting-tools/) 참고.
+스타일 가이드에 해당하는 [.eslintrc](.eslintrc) 설정 파일을 참고할 것.
 
 
 ## WebStorm, PhpStorm 설정
