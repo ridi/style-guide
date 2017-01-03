@@ -1,6 +1,9 @@
 {
   "extends": "airbnb",
   "rules": {
+    // 클래스 메서드 안에서 반드시 this를 사용할 필요 없음
+    "class-methods-use-this": 0,
+
     // 줄 마지막 , 는 생략 가능
     "comma-dangle": 1,
 
