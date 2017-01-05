@@ -4,6 +4,13 @@
 
 [Airbnb의 자바스크립트 스타일 가이드](https://github.com/airbnb/javascript/blob/master/README.md)를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용한다.
 
+우리의 기조는 아래와 같다. (중요한 순서대로)
+
+ 1. 기호의 문제가 발생했을 때에는 짧고 간결한 것을 택할 것
+ 2. 1번이 동일할 때에는 일관성이 있는 쪽을 택할 것
+ 3. 2번이 동일할 때에는 대중성이 있는 쪽을 택할 것
+
+
 ## ES6
 
 권장되는 자바스크립트 버전은 ES6(ECMAScript 2015)이며, 하위 호환이 필요한 경우에는 [Babel](https://babeljs.io/) 트랜스파일러를 통하여 지원한다. ES6에 대해 들어본 적이 없다면, [간략한 소개](https://babeljs.io/docs/learn-es2015/)와 [ES6 In Depth 시리즈](http://hacks.mozilla.or.kr/category/es6-in-depth/) 소개글을 읽어볼 것.
