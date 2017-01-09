@@ -7,7 +7,8 @@
     - line length는 soft limit(120 characters per line)을 따름
   
   - [2.4 Indenting](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#24-indenting)
-    - space(4) 대신 Tab 문자를 사용
+    - GitHub에서 신규로 관리되는 프로젝트는 space(4)를 사용
+    - __비공개로 유지되는 레거시 코드는 tab(4) 문자를 사용__
   
   - [3. Declare Statements, Namespace, and Use Declarations](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-use-declarations)
     - declare 구분의 '=' 좌우에 공백을 삽입
