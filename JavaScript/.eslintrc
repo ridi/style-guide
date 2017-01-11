@@ -13,6 +13,9 @@
     // 가독성을 위해 private 변수 앞에 _ prefix 붙이기 허용
     "no-underscore-dangle": "off",
 
+    // 명시적으로 괄호를 사용할 경우 조건문 안에서 변수 선언 가능 (eslint default)
+    "no-cond-assign": ["error", "except-parens"],
+
     // ++ 문법은 for 루프안에서만 허용
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   }
