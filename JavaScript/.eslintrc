@@ -15,6 +15,9 @@
 
     // 명시적으로 괄호를 사용할 경우 조건문 안에서 변수 선언 가능 (eslint default)
     "no-cond-assign": ["error", "except-parens"],
+    
+    // 무한루프 while (true) 등의 구문을 허용
+    "no-constant-condition": ["error", { "checkLoops": false }],
 
     // ++ 문법은 for 루프안에서만 허용
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
