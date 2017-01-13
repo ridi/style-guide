@@ -1,7 +1,6 @@
 #!/bin/sh
 files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.php$')
 for file in $files; do
-	echo $file
 	# 1. php-cs-fixer
 	result=$(php-cs-fixer fix --dry-run -v $file 2>/dev/null)
 	if [ $? -ne 0 ]; then
