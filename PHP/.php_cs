@@ -6,7 +6,7 @@
 
 return PhpCsFixer\Config::create()
     ->setRules([
-        '@PSR2' => true,
+        '@Symfony' => true,
 
         // 1. ignored rules from @Symfony
         'blank_line_after_opening_tag' => false,
@@ -24,6 +24,9 @@ return PhpCsFixer\Config::create()
         // 2. additional rules
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => true,
+
+        // 3. optional rules
+        'indentation_type' => false,  // 탭을 사용할 경우에는 false negative 발생
     ])
     //->setIndent("\t")     // 레거시 코드일 경우에는 탭 사용
     //->setFinder($finder)
