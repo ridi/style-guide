@@ -1,0 +1,21 @@
+#!/bin/sh
+files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.php$')
+for file in $files; do
+	echo $file
+	# 1. php-cs-fixer
+	result=$(php-cs-fixer fix --dry-run -v $file 2>/dev/null)
+	if [ $? -ne 0 ]; then
+		>&2 echo "Coding standard error on $file"
+		#echo $result
+		exit 1;
+	fi
+
+	# 2. php -l
+	result=$(php -l $file &>/dev/null)
+	if [ $? -ne 0 ]; then
+		>&2 echo "Syntax error on $file"
+		#echo $result
+		exit 1;
+	fi	
+done;
+
