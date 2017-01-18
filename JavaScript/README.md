@@ -2,13 +2,8 @@
 
 ## Style Guide
 
-[Airbnb의 자바스크립트 스타일 가이드](https://github.com/airbnb/javascript/blob/master/README.md)를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용한다.
-
-우리의 기조는 아래와 같다. (중요한 순서대로)
-
- 1. 기호의 문제가 발생했을 때에는 짧고 간결한 것을 택할 것
- 2. 1번이 동일할 때에는 일관성이 있는 쪽을 택할 것
- 3. 2번이 동일할 때에는 대중성이 있는 쪽을 택할 것
+[Airbnb의 자바스크립트 스타일 가이드](https://github.com/airbnb/javascript/blob/master/README.md)를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용하고 있다.
+변경된 규칙은 [이곳](https://github.com/ridibooks/eslint-config-ridibooks)에서 확인할 수 있다.
 
 
 ## ES6
@@ -18,9 +13,10 @@
 
 ## ES6 Linting
 
-정적 분석기로는 Airbnb preset을 제공하는 ESLint 를 사용한다.
-"왜 ESLint 인가?" 에 대해서는 JSLint, JSHint(현재 grunt에서 사용), JSCS 와 [비교글](https://www.sitepoint.com/comparison-javascript-linting-tools/) 참고.
-스타일 가이드에 해당하는 [.eslintrc](.eslintrc) 설정 파일을 참고할 것.
+정적 분석기로는 ESLint를 사용한다.
+"왜 ESLint 인가?"에 대해서는 JSLint, JSHint(현재 grunt에서 사용), JSCS 와 [비교글](https://www.sitepoint.com/comparison-javascript-linting-tools/) 참고.
+
+npm 을 사용한다면 [eslint-config-ridibooks](https://www.npmjs.com/package/eslint-config-ridibooks) 패키지를 통해 미리 설정된 규칙을 손쉽게 사용할 수 있다.
 
 
 ## WebStorm, PhpStorm 설정

@@ -1,22 +1,42 @@
-# RIDI Coding Style Guide
+# RIDI Style Guide
 
-- [Android](Android.md) - Kotlin, Java, XML 코딩 스타일
-- [iOS](iOS.md) - Swift, Objective-C 코딩 스타일
+### Language
+
 - [HTML](HTML.md) - HTML, Twig/Jinja2 코딩 스타일
 - [JavaScript](JavaScript/JavaScript.md)
 - [Less](Less.md) - Less/CSS 코딩 스타일
 - [MariaDB(MySQL)](MariaDB(MySQL).md) - DDL, DML 작성 규칙
 - [PHP](PHP/PHP.md)
 - [Python](Python.md)
+
+
+### Platform
+
+- [Android](Android.md) - Kotlin, Java, XML 코딩 스타일
+- [iOS](iOS.md) - Swift, Objective-C 코딩 스타일
 - [Qt](Qt.md) - C++, XML 코딩 스타일
 
 
-- [API](API.md) - RESTful API 작성 규칙
+### Etc
+
+- [RESTful API](API.md) - RESTful API 작성 규칙
+- Documentation
 
 
 <br>
 
-# 코드 리뷰 원칙
+## 규칙을 정하는 규칙
+
+우리의 기조는 아래와 같다. (중요한 순서대로)
+
+ 1. 기호의 충돌이 발생했을 때에는 짧고 간결한 것을 택할 것
+ 2. 1번이 동일할 때에는 일관성이 있는 쪽을 택할 것
+ 3. 2번이 동일할 때에는 대중성이 있는 쪽을 택할 것
+
+
+<br>
+
+## 코드 리뷰 원칙
 
 - 충분히 좋아야 올바르게 리뷰한 것
 - 의견보다 사실을 주장할 것
