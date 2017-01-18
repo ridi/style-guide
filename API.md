@@ -11,7 +11,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - 인증에는 OAuth 2.0 을 사용해야 함
      
 
-2. Internal API
+2. Protected API
 
    - 세컨드파티 혹은 내부 직원만 사용 가능
    - 스펙문서는 내부 관계자만 접근 가능
@@ -26,7 +26,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 
 
-#### Public/Internal API는,
+#### Public/Protected API는,
 
 - 반드시 HTTP 1.1 이상을 지원해야 한다.
 - 반드시 REST 혹은 GraphQL 기반으로 작성되어야 한다.
