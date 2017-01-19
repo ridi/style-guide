@@ -7,7 +7,7 @@
 - [Less](Less.md) - Less/CSS 코딩 스타일
 - [MariaDB(MySQL)](MariaDB(MySQL).md) - DDL, DML 작성 규칙
 - [PHP](PHP/PHP.md)
-- [Python](Python.md)
+- [Python3](Python.md)
 
 
 ### Platform
@@ -20,7 +20,7 @@
 ### Etc
 
 - [RESTful API](API.md) - RESTful API 작성 규칙
-- Documentation
+- DDD(TBA)
 
 
 <br>
