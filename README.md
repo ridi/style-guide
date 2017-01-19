@@ -3,7 +3,7 @@
 ### Language
 
 - [HTML](HTML.md) - HTML, Twig/Jinja2 코딩 스타일
-- [JavaScript](JavaScript/JavaScript.md)
+- [JavaScript](JavaScript/README.md)
 - [Less](Less.md) - Less/CSS 코딩 스타일
 - [MariaDB(MySQL)](MariaDB(MySQL).md) - DDL, DML 작성 규칙
 - [PHP](PHP/PHP.md)
