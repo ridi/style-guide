@@ -39,6 +39,8 @@ lang.org/docs/reference/coding-conventions.html)을 따른다.
 
 
 ## Java 코딩 스타일
+
+[Android Studio 설정 파일](IDE/AndroidStudio/CodeStyle.xml)
  
 안드로이드 오픈소스 프로젝트(AOSP)의 [Code Style Guidelines for Contributors](http://source.android.com/source/code-style.html)를 따른다.
 이 외에 차이점이나 추가 사항은 아래와 같다.
