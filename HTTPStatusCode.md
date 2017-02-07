@@ -40,6 +40,6 @@
   - 요청은 정상적으로 받았지만 서버 처리 중 문제가 발생할 경우 전반에 사용한다.
     
 #### 참고
-[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html/)
-[Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
+  - [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html/)
+  - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
 
