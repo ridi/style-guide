@@ -20,6 +20,7 @@
 ### Etc
 
 - [RESTful API](API.md) - RESTful API 작성 규칙
+- [HTTP Status Code](HTTPStatusCode.md) - HTTP Status Code 규칙
 - DDD(TBA)
 
 
