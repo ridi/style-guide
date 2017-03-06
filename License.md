@@ -5,7 +5,7 @@
   - 모든 소스코드의 최상단에 라이선스를 표시할 필요는 없음
 - 라이선스 템플릿은 아래와 같다
   ```
-  Copyright [YEAR] Google Inc. All rights reserved.
+  Copyright [YEAR] RIDI Corporation
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
