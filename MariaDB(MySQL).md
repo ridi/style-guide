@@ -15,7 +15,7 @@
 - MyISAM 사용 금지 (트랜잭션이 없더라도 InnoDB가 유리함)
 - TokuDB 사용은 로그성 테이블에만 한정
 - Charset: `utf8` 혹은 `utf8mb4`
-- Collation: `utf8unicode_ci` 혹은 `utf8mb4unicode_ci`
+- Collation: `utf8_unicode_ci` 혹은 `utf8mb4_unicode_ci`
 
 #### 코멘트 작성
 - 테이블 코멘트는 반드시 작성
