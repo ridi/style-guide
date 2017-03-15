@@ -100,10 +100,3 @@
 START TRANSACTION을 했더라도 LOCK TABLE 시 이전에 수행중인 트랜잭션을 commit 하기 때문에 이후 실행된 쿼리가 롤백되지 않음
 
 참고: http://dev.mysql.com/doc/refman/5.0/en/lock-tables-and-transactions.html
-
-
-
-
-## 기타 참고자료
-
-- [How to Kill MySQL Performance](http://www.slideshare.net/techdude/how-to-kill-mysql-performance)
