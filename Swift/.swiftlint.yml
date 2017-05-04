@@ -19,9 +19,9 @@ disabled_rules:
   - vertical_whitespace # 수직 여백 허용 (Note 1)
 
 opt_in_rules:
-  - empty_count # isEmpty 사용 강제 (Note 1, 5)
   - closure_end_indentation # 클로저의 시작과 끝의 들여쓰기를 동일하게 맞추도록 (Note 1)
   - closure_spacing # 클로저 표현식의 시작과 끝에 공백을 넣도록 (Note 1)
+  - empty_count # isEmpty 사용 강제 (Note 1, 5)
   - explicit_init # 명시적인 init 호출을 하지 않도록 (Note 1)
   - first_where # `.filter { … }.first` 보다 `.first(where: { … })`를 사용하도록 (Note 1, 5)
 
