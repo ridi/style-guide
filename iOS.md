@@ -4,15 +4,6 @@
 
 [Apple's Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)와 [Ray Wenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)를 따르되 다음을 예외로 한다.
 
-- 파라메터 없이 값을 반환하는 `func`은 빅오에 상관없이 프로퍼티로 대체한다.
-
-```swift
-// Before
-func books() -> [RBBook] { return ... }
-// After
-var books: [RBBook] { return ... }
-```
-
 - `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다.
 
 - `if`, `guard` 문에 콤마(,)를 이용해 조건을 추가할 경우 콤마 뒤에서 다음 줄로 넘어간다.
@@ -90,7 +81,7 @@ NSNumber *modernNumber = @5; // @.5, @1.5, @YES, @(4 + 2)
 
 ```obj-c
 if (condition) {
-	doSomething();
+    doSomething();
 }
 ```
 
