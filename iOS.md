@@ -20,17 +20,17 @@ var books: [RBBook] { return ... }
 ```swift
 // Bad
 if results.isEmpty.not(), let delegate = seriesDelegate(byId: seriesId) {
-	books.append(delegate)
+    books.append(delegate)
 }
 // Bad
 if results.isEmpty.not(),
-	let delegate = seriesDelegate(byId: seriesId) {
-	books.append(delegate)
+    let delegate = seriesDelegate(byId: seriesId) {
+    books.append(delegate)
 }
 // Good
 if results.isEmpty.not(),
-	let delegate = seriesDelegate(byId: seriesId) {
-		books.append(delegate)
+    let delegate = seriesDelegate(byId: seriesId) {
+        books.append(delegate)
 }
 ```
 
@@ -39,13 +39,13 @@ if results.isEmpty.not(),
 ```swift
 // Bad
 if let userInfo = notification.userInfo,
-	bookId = userInfo["bookId"] as? String {
-		removeObject(forKey: bookId)
+    bookId = userInfo["bookId"] as? String {
+        removeObject(forKey: bookId)
 }
 // Good
 if let userInfo = notification.userInfo,
-	let bookId = userInfo["bookId"] as? String {
-		removeObject(forKey: bookId)
+    let bookId = userInfo["bookId"] as? String {
+        removeObject(forKey: bookId)
 }
 ```
 
@@ -180,17 +180,17 @@ if (condition) {
 
 - 접미어에 orientaion, screenHeight, rate, interfaceIdiom이 있다.
 - 각 접미어는 상황에 맞춰 선택적으로 쓰이며 쓸 때는 알맞는 접두어를 사용해야 한다.
-    - ***-***[orientaion]
-    - ***-***[screenHeight]
-    - ***@***[rate]
-    - ***~***[interfaceIdiom]
+    - **-**[orientaion]
+    - **-**[screenHeight]
+    - **@**[rate]
+    - **~**[interfaceIdiom]
 - 접미어는 위에서 언급한 순서대로 사용되어야 한다.
     - X) name-[rate]-[orientaion]
     - X) name-[interfaceIdiom]-[rate]
     - O) name-[screenHeight]-[rate]
 - orientaion은 특정 회전 상태에만 쓰일 수 있도록 하는 접미어다.
-    - name-***P***ortrait.png // 세로 모드에서만 사용
-    - name-***L***andscape.png // 가로 모드에서만 사용
+    - name-**P**ortrait.png // 세로 모드에서만 사용
+    - name-**L**andscape.png // 가로 모드에서만 사용
     - name.png // 생략했을 때는 모든 회전 상태에서 사용함을 의미
 - screenHeight는 아이폰 크기가 파편화되면서 생긴 것으로 특정 크기에만 쓰일 수 있도록 하는 접미어다.
     - name-568h.png // 3.5~4.0인치에서만 사용
