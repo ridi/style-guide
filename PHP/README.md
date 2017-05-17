@@ -30,8 +30,8 @@
   - Code Style > PHP > Other
     - ✅ Force short declaration style
   - File and Code Templates > Includes > File Header
-    - PHP File Header 의 내용을 비울 것
-  - General > Other
+    - PHP File Header 의 내용을 비울 것
+  - General > Other
     - ✅ Ensure line feed at file end on Save
     
 ## Inspections
