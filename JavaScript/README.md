@@ -6,12 +6,12 @@
 변경된 규칙은 [이곳](https://github.com/ridibooks/eslint-config-ridibooks)에서 확인할 수 있다.
 
 
-## ES6
+## ES2015+
 
-권장되는 자바스크립트 버전은 ES6(ECMAScript 2015)이며, 하위 호환이 필요한 경우에는 [Babel](https://babeljs.io/) 트랜스파일러를 통하여 지원한다. ES6에 대해 들어본 적이 없다면, [간략한 소개](https://babeljs.io/docs/learn-es2015/)와 [ES6 In Depth 시리즈](http://hacks.mozilla.or.kr/category/es6-in-depth/) 소개글을 읽어볼 것.
+권장되는 최소 자바스크립트 버전은 ES6(ECMAScript 2015)이다. 하위 호환이 필요한 경우에는 [Babel](https://babeljs.io/) 트랜스파일러를 통하여 지원하되, 가능한 최신(latest) 문법을 활용할 것. ES6에 대해 들어본 적이 없다면, [간략한 소개](https://babeljs.io/docs/learn-es2015/)와 [ES6 In Depth 시리즈](http://hacks.mozilla.or.kr/category/es6-in-depth/) 소개글을 읽어볼 것.
 
 
-## ES6 Linting
+## Linting
 
 정적 분석기로는 ESLint를 사용한다.
 "왜 ESLint 인가?"에 대해서는 JSLint, JSHint(현재 grunt에서 사용), JSCS 와 [비교글](https://www.sitepoint.com/comparison-javascript-linting-tools/) 참고.
