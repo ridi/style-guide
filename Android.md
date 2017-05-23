@@ -61,6 +61,11 @@ lang.org/docs/reference/coding-conventions.html)을 따른다.
   ```
 
 
+## 공통 코딩 스타일
+
+- 소스코드 상단에 저작권 및 저자를 표시하는 주석은 남기지 않는다.
+
+
 ## 리소스 네이밍
 
 - layout
