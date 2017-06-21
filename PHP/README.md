@@ -12,12 +12,12 @@
 
 ## 버전
 - 팀 외부에 공유되는 Composer 패키지는,
-  - 최소 **7.0** 이상을 지원해야 함
-  - 최신 안정화 버전까지 상위호환을 보장해야 
+  - 최소 7.0 이상을 지원해야 함
+  - 최신 안정화 버전까지 상위호환을 보장해야 함
 - 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용
-    - try ~ catch ~ finally, short array syntax, trait 등
-    - Type Hinting 은 최대한 활용
-- 새로 작성하는 파일은 `declare(strict_types=1);`를 적용한다.
+  - try ~ catch ~ finally, short array syntax, trait 등
+  - Type Hinting은 최대한 활용
+- 새로 작성하는 파일은 declare(strict_types=1) 적용
 
 
 ## PhpStorm 사용시
