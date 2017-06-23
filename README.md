@@ -22,7 +22,7 @@
 - [RESTful API](API.md) - RESTful API 작성 규칙
 - [HTTP Status Code](HTTPStatusCode.md) - HTTP Status Code 규칙
 - DDD(TBA)
-- [UI 텍스트](UItext.md) - UI 텍스트 작성 가이드라인
+- [UI 텍스트 작성 가이드](UItext.md)
 
 
 <br>
