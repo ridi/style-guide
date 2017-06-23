@@ -1,0 +1,24 @@
+version: 2
+
+always_pending:
+  title_regex: 'WIP'
+  explanation: 'Work in progress...'
+
+group_defaults:
+  approve_by_comment:
+    enabled: true
+    approve_regex: ^:\+1:
+  reset_on_push:
+    enabled: false
+
+groups:
+  reviewers:
+    required: 2
+    users:
+    - antiline
+    - earus
+    - freekering
+    - genesos
+    - iamchanu
+    - jaeminbae
+    - namenu
