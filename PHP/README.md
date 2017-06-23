@@ -11,12 +11,13 @@
 
 
 ## 버전
-- PHP 버전은 **7.0**를 기준으로 한다.
-    - PhpStorm > Preferences > PHP > PHP Language Level > 7.0 선택 > Apply
-    - __하위 버전 호환은 고려하지 않는다.__
-- 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용하도록 한다.
-    - try ~ catch ~ finally, short array syntax, trait 등
-    - Type Hinting 은 최대한 활용
+- 팀 외부에 공유되는 Composer 패키지는,
+  - 최소 7.0 이상을 지원해야 함
+  - 최신 안정화 버전까지 상위호환을 보장해야 함
+- 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용
+  - try ~ catch ~ finally, short array syntax, trait 등
+  - Type Hinting은 최대한 활용
+- 새로 작성하는 파일은 declare(strict_types=1) 적용
 
 
 ## PhpStorm 사용시
