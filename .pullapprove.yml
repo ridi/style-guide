@@ -7,18 +7,31 @@ always_pending:
 group_defaults:
   approve_by_comment:
     enabled: true
-    approve_regex: ^:\+1:
+    approve_regex: '^:\+1:'
   reset_on_push:
     enabled: false
 
 groups:
-  reviewers:
+  developers:
+    conditions:
+      files:
+        - "*.md"
     required: 2
     users:
-    - antiline
-    - earus
-    - freekering
-    - genesos
-    - iamchanu
-    - jaeminbae
-    - namenu
+      - namenu
+      - antiline
+      - earus
+      - freekering
+      - genesos
+      - iamchanu
+
+  designers:
+    conditions:
+      files:
+        - "UI/*"
+    required: 1
+    users:
+      - jaeminbae
+      - earus
+      - freekering
+      - namenu
