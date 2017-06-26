@@ -12,10 +12,7 @@ group_defaults:
     enabled: false
 
 groups:
-  developers:
-    conditions:
-      files:
-        - "*.md"
+  dev:
     required: 2
     users:
       - namenu
@@ -25,7 +22,7 @@ groups:
       - genesos
       - iamchanu
 
-  designers:
+  design:
     conditions:
       files:
         - "UI/*"
