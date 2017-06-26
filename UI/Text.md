@@ -144,7 +144,7 @@ UI 텍스트는 물 흐르듯 자연스러운 사용자 경험을 만드는 뼈�
 * 단어 두 개가 붙어있는 경우, 고유 기능에 가까운 경우에는 붙여 쓰고 나머지는 띄어 씁니다.
 	> 예) 독서노트, 첫화보기 / 쿠폰 등록, 책장 목록  
 	> 다만, 한 단어에 대한 띄어쓰기 기준을 정하면 어느 곳에서나 통일하여 사용합니다.  
-* 어떤 단어를 써야할 지 헷갈린다면 ‘[띄어쓰기 사전](https://docs.google.com/spreadsheets/d/1IeipqWBRqKqEBRTUM7oxeUcMJMbzv4zXn_UMTL87gEA/edit?usp=sharing)’을 참고해주세요. 단어 예시가 존재하지 않는다면 재민 CDO님에게 문의해주세요.
+* 어떤 단어를 써야할 지 헷갈린다면 ‘[띄어쓰기 사전](https://docs.google.com/spreadsheets/d/1IeipqWBRqKqEBRTUM7oxeUcMJMbzv4zXn_UMTL87gEA/edit?usp=sharing)’을 참고해주세요. 단어 예시가 존재하지 않는다면 [새로운 이슈](https://github.com/ridi/style-guide/issues/new)로 등록해 주세요.
 
 
 ## 다이얼로그 작성 요령
