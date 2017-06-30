@@ -5,7 +5,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 1. Public API
 
    - 서드파티 혹은 임의의 개인이 사용 가능
-   - 스펙문서는 [Blueprint](https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md) 형식으로 작성하여 공개할 것
+   - 스펙문서는 [Swagger](https://swagger.io/) 형식으로 작성하여 외부에 공개
    - 하위 호환은 최소 6개월 이상 유지
    - 보안 프로토콜(https)을 사용해야 함
    - 인증에는 OAuth 2.0 을 사용해야 함
@@ -14,8 +14,8 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 2. Protected API
 
    - 세컨드파티 혹은 내부 직원만 사용 가능
-   - 스펙문서는 내부 관계자만 접근 가능
-   - 하위호환은 최대 3개월까지 유지
+   - 스펙문서는 RAML로 작성하고 내부 직원만 열람 가능 가능
+   - 하위호환은 최대 3개월까지 유지
      
 
 3. Private API
@@ -87,4 +87,4 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 - [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html/)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
-
+- [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
