@@ -126,7 +126,7 @@ UI 텍스트는 물 흐르듯 자연스러운 사용자 경험을 만드는 뼈�
 
 
 ### 외래어를 표기하는 경우
-외래어 표기법에 맞추어 적습니다.
+[외래어 표기법](https://www.korean.go.kr/front/foreignSpell/foreignSpellList.do)에 맞추어 적습니다.
 > x: 어플리케이션, 컨텐츠  
 > o: 애플리케이션, 콘텐츠  
 
