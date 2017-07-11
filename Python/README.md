@@ -65,6 +65,7 @@
 
 - 비교
   - None과 비교, Boolean 비교는 is, is not 을 사용한다.
+  - Boolean 비교: if not is_ok:
   - 객체의 타입을 비교할 때는 isinstance() 를 사용한다.
 
 - 문자열
