@@ -24,6 +24,11 @@
 ## 변경 규칙
 - 1행에 120자까지 사용한다.
 
+- 가독성 관련
+    - 반복문과 분기를 한 라인이 같이 담는 식의 코드를 작성하지 않는다.
+    ```python
+    content_ids = [content.id for content in contents if content is not None]
+    ```
 
 - 줄바꿈, 공백
   - 들여쓰기는 공백 4칸을 사용한다.
