@@ -10,12 +10,7 @@
 - 파이썬 패키지 에서 __init__.py 를 만들지 말자.
 - import 
   - pycharm 의 Code > Optimize Imports 기능을 수행한다.
-  - import 는 명시적 성격의 상태 임포트 사용한다.
-    - ex) from .forms import WafflesCone
-  - import * 쓰지말자
-- get_obejct_or_404() 는 뷰쪽에서만 사용하자.
-  - helper, form, model method, view
-- locals() 를 사용하지 말자
+  - import 할 때 * 사용하지 말자.
 - 상속
   - 상속은 오른쪽으로 진행한다.
   - Mixin은 기본 부모에서부터 왼쪽으로 진행한다.
