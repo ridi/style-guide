@@ -20,17 +20,6 @@
   - 상속은 오른쪽으로 진행한다.
   - Mixin은 기본 부모에서부터 왼쪽으로 진행한다.
   - 무조건 최상위 부모는 object 이어야 한다.
-- 상수
-  ```py
-  class UserTypeConstant:
-    @constant
-    def ADMIN():
-      return 'admin'
-  
-    @constant
-    def CUSTOMER():
-      return 'customer'
-  ```
 
 ## 변경 규칙
 - 1행에 120자까지 사용한다.
