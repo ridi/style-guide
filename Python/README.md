@@ -22,8 +22,15 @@
 
 - 가독성 관련
     - 반복문과 분기를 한 라인이 같이 담는 식의 코드를 작성하지 않는다.
+    Bad)
     ```python
     content_ids = [content.id for content in contents if content is not None]
+    ```
+    Alternative)
+    ```python
+    content_ids = [content.id for content in filter(None, contents)]
+    # or
+    content_ids = map(lambda content: content.id, filter(None, contents))
     ```
 
 ## 변경 규칙
@@ -49,17 +56,9 @@
 
 - 세미콜론을 사용하지 않는다. 
   - 2개의 command 를 세미콜론을 사용해 한라인에 표현이 가능하지만 사용하지 않는다.
-  
-- 줄바꿈, 공백
-  - 들여쓰기는 공백 4칸을 사용한다.
-  - 최상위(top-level) 함수와 클래스 정의는 2줄씩 띄어쓴다.
-  - 클래스 내의 메소드 정의는 1줄씩 띄어쓴다.
-  - 키워드 인자(keyword argument)와 인자의 기본값(default parameter value)의 = 는 붙여 쓴다.
     
 - 클래스
-  - 인스턴스 메소드의 첫 번째 인자는 언제나 self 이다.
-  - 클래스 메소드의 첫 번째 인자는 언제나 cls 이다.
-  - 클래스에서 private 맴버나 메소드는 이름 앞에 밑줄을 추가한다.
+  - 클래스에서 private 멤버나 메소드는 이름 앞에 밑줄을 추가한다.
 
 - 비교
   - None과 비교, Boolean 비교는 is, is not 을 사용한다.
