@@ -22,12 +22,14 @@
 
 - 가독성 관련
     - 반복문과 분기를 한 라인이 같이 담는 식의 코드를 작성하지 않는다.
-    Bad)
+   
     ```python
+    # Bad
     content_ids = [content.id for content in contents if content is not None]
     ```
-    Alternative)
+    
     ```python
+    # Alternative
     content_ids = [content.id for content in filter(None, contents)]
     # or
     content_ids = map(lambda content: content.id, filter(None, contents))
