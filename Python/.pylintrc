@@ -23,7 +23,7 @@ persistent=yes
 load-plugins=
 
 # Use multiple processes to speed up Pylint.
-jobs=1
+jobs=4
 
 # Allow loading of arbitrary C extensions. Extensions are imported into the
 # active Python interpreter and may run arbitrary code.
@@ -65,9 +65,11 @@ confidence=
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use"--disable=all --enable=classes
 # --disable=W"
-disable=raw_input-builtin,oct-method,no-absolute-import,cmp-method,unicode-builtin,backtick,coerce-method,reload-builtin,unpacking-in-except,dict-iter-method,indexing-exception,coerce-builtin,execfile-builtin,map-builtin-not-iterating,intern-builtin,import-star-module-level,xrange-builtin,input-builtin,filter-builtin-not-iterating,getslice-method,print-statement,round-builtin,range-builtin-not-iterating,long-suffix,suppressed-message,next-method-called,apply-builtin,setslice-method,nonzero-method,buffer-builtin,useless-suppression,dict-view-method,reduce-builtin,metaclass-assignment,using-cmp-argument,standarderror-builtin,zip-builtin-not-iterating,long-builtin,parameter-unpacking,unichr-builtin,old-ne-operator,delslice-method,old-division,old-raise-syntax,file-builtin,old-octal-literal,cmp-builtin,hex-method,basestring-builtin,raising-string,import-error,too-few-public-methods,C0111,I0011,I0012,W0142,W0212,W0232,W0613,R0201,W0614,R0914,R0915,R0913,R0904,R0801
 
-# C0111 Missing docstring
+disable=too-many-ancestors,unexpected-keyword-arg,too-many-return-statements,raw_input-builtin,oct-method,invalid-encoded-data,no-absolute-import,invalid-name,unused-import,no-member,too-many-arguments,cmp-method,unicode-builtin,backtick,coerce-method,no-name-in-module,unused-variable,reload-builtin,unpacking-in-except,dict-iter-method,indexing-exception,coerce-builtin,execfile-builtin,map-builtin-not-iterating,intern-builtin,import-star-module-level,xrange-builtin,input-builtin,filter-builtin-not-iterating,getslice-method,print-statement,round-builtin,range-builtin-not-iterating,long-suffix,suppressed-message,next-method-called,apply-builtin,setslice-method,nonzero-method,buffer-builtin,useless-suppression,dict-view-method,reduce-builtin,metaclass-assignment,using-cmp-argument,standarderror-builtin,zip-builtin-not-iterating,long-builtin,parameter-unpacking,unichr-builtin,old-ne-operator,delslice-method,old-division,old-raise-syntax,file-builtin,old-octal-literal,cmp-builtin,hex-method,basestring-builtin,raising-string,import-error,too-few-public-methods,C0111,I0011,I0012,W0142,W0212,W0232,W0613,R0201,W0614,R0914,R0915,R0913,R0904,R0801,C0411
+
+
+# C0111 Missing docstring 
 # I0011 Warning locally suppressed using disable-msg
 # I0012 Warning locally suppressed using disable-msg
 # W0704 Except doesn't do anything Used when an except clause does nothing but "pass" and there is no "else" clause
@@ -246,7 +248,7 @@ logging-modules=logging
 [MISCELLANEOUS]
 
 # List of note tags to take in consideration, separated by a comma.
-notes=FIXME,XXX,TODO
+notes=FIXME,XXX
 
 
 [SIMILARITIES]
@@ -372,7 +374,7 @@ max-statements=50
 max-parents=7
 
 # Maximum number of attributes for a class (see R0902).
-max-attributes=7
+max-attributes=12
 
 # Minimum number of public methods for a class (see R0903).
 min-public-methods=2
