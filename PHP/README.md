@@ -156,7 +156,7 @@
     PHP - PHP Code Sniffer Validation 에 체크
     오른편 Coding standard 메뉴에서 Custom 선택 후 [...] 버튼을 누르고 ruleset.xml 선택
     (ruleset 위치 : Ridibooks-Web/docs/lint/php)
-  - 참고 : https://www.jetbrains.com/phpstorm/help/using-php-code-sniffer-tool.html
+  - 참고 : https://confluence.jetbrains.com/display/PhpStorm/PHP+Code+Sniffer+in+PhpStorm
 
 
 
