@@ -63,9 +63,8 @@
     - 'I will be back.' 
     - "I'll be back."
   - https://secure.php.net/language.types.string
-- 템플릿 문자열("$var")의 사용
-  - 필요한 경우에만 curly brace({})를 사용
-    - IDE상에서 쉽게 식별이 가능하므로
+- 템플릿 문자열에서 curly brace({"$var"})의 사용
+  - IDE상에서 쉽게 식별이 가능하므로, 필요한 경우에만 괄호로 감쌀 것
 
 ### 비교문
 
@@ -88,17 +87,7 @@
 
 ### 배열
 
-- indexed array에 array_unique 사용시 array_values 사용
-  ```php
-  var_dump(array_unique([1,2,2,2,3,3,3,3]));
-  // array(3) { [0]=> int(1) [1]=> int(2) [4]=> int(3) }
-  var_dump(array_values(array_unique([1,2,2,2,3,3,3,3])));
-  // array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
-  var_dump(json_encode(array_unique([1,2,2,2,3,3,3,3])));
-  // string(19) "{"0":1,"1":2,"4":3}"
-  var_dump(json_encode(array_values(array_unique([1,2,2,2,3,3,3,3]))));
-  // string(7) "[1,2,3]"
-  ```
+- 항상 short array 문법([])을 사용할 것
 
 
 
@@ -109,7 +98,7 @@
   - 최소 7.0 이상을 지원해야 함
   - 최신 안정화 버전까지 상위호환을 보장해야 함
 - 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용
-  - try ~ catch ~ finally, short array syntax, trait 등
+  - try ~ catch ~ finally, trait 등
   - Type Hinting은 최대한 활용
 
 
