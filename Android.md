@@ -74,7 +74,7 @@ lang.org/docs/reference/coding-conventions.html)을 따른다.
   - 예) activty_tutorial, fragment_shelf, shelf_toolbar
 - drawable
   - 기본적으로 상위 개념에서 하위 개념을 순차적으로 표기한다. 
-  - 특정 상, 하위 개념에 속하지 않을 경우엔 표기하지 않는다. 
+  - 특정 상, 하위 개념에 속하지 않거나, 여러 코드에 공통으로 사용할 경우에는 표기하지 않는다. 
   - 예) reader_typo_setting_column_width.xml, simple_noti_icon_error.png
   - 아이콘(icon), 버튼(btn), 배경(bg), 셀렉터(sel)등 리소스의 종류를 상, 하위 개념 다음에 함께 표기한다. 
     상, 하위 개념과 리소스의 종류를 표기 한 뒤 기능과 모양에 어울리는 이름을 자유롭게 추가한다.
