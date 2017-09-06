@@ -5,16 +5,24 @@
 
 
 ## 추가 규칙
-- 리스트, 튜플, 딕셔너리 사용시 마지막에 , 를 붙인다.(Trailing commas)
-  - 이유는 데이터 추가시 Diff 보기 편하다.
-- 파이썬 패키지 에서 __init__.py 를 만들지 않는다.
+- 리스트, 튜플, 딕셔너리 사용시 마지막에 ,(trailing commas)를 붙인다.
+
+    - 데이터 추가시 diff 보기에 편하다.
+
+- 파이썬 패키지에서 \_\_init\_\_.py를 만들지 않는다.
+
 - 예외 Exception
-  - 예외는 클래스로 만들어서 사용한다.
-- import 
-  - pycharm 의 Code > Optimize Imports 기능을 수행한다.
+
+  - 예외는 항상 클래스로 만들어서 사용한다.
+
+- import
+  - PyCharm의 Code > Optimize Imports 기능을 수행한다.
+
 - 상속
-  - 최대한 다중상속을 피한다.
-  - Mixin 부터 기입한다. ex) Child(Mixin1, Mixin2, Parent)
+  - 다중상속의 개념은 사용하지 않는다.
+  - Mixin으로 사용할 경우 부모 클래스를 가장 마지막에 적는다.
+    - ex) Child(Mixin1, Mixin2, Parent)
+
 - 가독성 관련
     - 반복문과 분기를 한 라인이 같이 담는 식의 코드를 작성하지 않는다.
 
