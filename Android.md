@@ -74,12 +74,12 @@ lang.org/docs/reference/coding-conventions.html)을 따른다.
   - 예) activty_tutorial, fragment_shelf, shelf_toolbar
 - drawable
   - 기본적으로 상위 개념에서 하위 개념을 순차적으로 표기한다. 
-  - 특정 상, 하위 개념에 속하지 않을 경우엔 표기하지 않는다. 
+  - 특정 상위, 하위 개념에 속하지 않거나, 여러 코드에 공통으로 사용할 경우에는 표기하지 않는다.
   - 예) reader_typo_setting_column_width.xml, simple_noti_icon_error.png
   - 아이콘(icon), 버튼(btn), 배경(bg), 셀렉터(sel)등 리소스의 종류를 상, 하위 개념 다음에 함께 표기한다. 
     상, 하위 개념과 리소스의 종류를 표기 한 뒤 기능과 모양에 어울리는 이름을 자유롭게 추가한다.
   - 예) reader_tts_ **icon** _pre.png / main_purchased_ **btn** _book_read.png
-  - 리소스 상, 하위개념의 영어 명칭은 안드로이드에 현재 개발된 상태를 참고하여 표기한다.
+  - 리소스 상위, 하위개념의 영어 명칭은 안드로이드에 현재 개발된 상태를 참고하여 표기한다.
   - 예) 내 서재(library), 개별 책장(shelf), 구매목록(purchased), 서점(store), 설정(settings), 
   - 책장 목록(shelf_list), 최근 읽은 책(recent_book), 독서노트(reading_note), 보기 설정(typo_setting), 뷰어 설정(reader_setting)
   - 테마에 따라 리소스를 구분해야하는 경우, 다크 테마용 리소스의 맨 뒤에 _d를 붙인다.
