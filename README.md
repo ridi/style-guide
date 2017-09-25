@@ -22,6 +22,7 @@
 - [슬랙 사용 규칙](Slack.md)
 - [RESTful API](API.md) - RESTful API 작성 규칙
 - [UI 텍스트 작성 가이드](UI/Text.md)
+- [CMS 개발 가이드](CMS.md)
 
 
 <br>
