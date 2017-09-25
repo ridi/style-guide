@@ -25,7 +25,7 @@ Preference 메뉴에서 Editor > Code Style > Javascript 선택
 
 * Tab and Indents 탭
   - Use Tab character 체크 해제
-  - Tab size 2
+  - Indent 2
 
 
 ### ESLint 설정하기
