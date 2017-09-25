@@ -1,12 +1,12 @@
 # CMS 개발 가이드
 
-## 방향
+### 방향
 
 - 운영자가 CMS 시스템이 받쳐주지 않아 자정까지 기다리거나 주말에 회사를 나오게 만들어서는 안된다.
 - 운영자도 고객. 운영상의 UX를 고민해야 한다.
 - 운영도구는 끊임없이 그 효율성이 개선되어야 하며, 궁극적으로는 모든 것이 자동화되어야 한다.
 
-## UX 가이드
+### UX 가이드
 
 **MUST**
 
@@ -34,7 +34,7 @@
   - 예) "서점 반영에 최대 5분이 소요됩니다.", "최대 100권까지만 노출됩니다." 등
 - Radio, Checkbox 등은 Label 태그로 감싸서 텍스트를 클릭해도 선택이 되도록
 
-```
+```html
 <label class="checkbox-inline">
   <input type="checkbox" name="notice_filter_types[]" value="{{ type }}"
          {% if type not in notice.hidden_filter_publisher_type %}checked="checked"{% endif %}> {{ type }}
