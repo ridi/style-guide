@@ -99,7 +99,7 @@
 
 
 
-## 버전
+## 사용 PHP 버전
 
 - 팀 외부에 공유되는 Composer 패키지는,
   - 최소 7.0 이상을 지원해야 함
@@ -108,6 +108,19 @@
   - try ~ catch ~ finally, trait 등
   - Type Hinting은 최대한 활용
 
+
+
+
+## 패키지 버저닝 및 릴리즈
+
+- 외부에서 참조될 필요가 있는 코드는 언제나 [Composer](https://getcomposer.org/) 기반으로 관리
+- 배포되는 버전은 반드시 명시적인 Git 태그를 사용하여 지정
+  - 커밋 레퍼런스(`#commit-ref`)를 통한 버전 관리는 [Composer에서 사용하지 말 것을 권장](https://github.com/composer/composer/blob/1.5/doc/articles/troubleshooting.md#i-have-locked-a-dependency-to-a-specific-commit-but-get-unexpected-results)하고 있음
+  - Composer의 [태그 명명 규칙](https://getcomposer.org/doc/articles/versions.md#tags)을 참고
+- 버전 관리 정책은 [Semantic Versioning](http://semver.org/)을 따를 것
+  - SemVer를 통해 이 패키지에 의존하는 사용자들에게 새로운 기능이나 버그 픽스, 또는 하위 호환 여부를 명확하게 전달 가능
+- 하위호환 이슈가 발생할 경우 반드시 CHANGELOG에 기록을 남길 것
+  - 내용과 형식은 [Doctrine2](https://github.com/doctrine/doctrine2/blob/master/UPGRADE.md) 프로젝트를 참고
 
 
 
@@ -173,3 +186,4 @@
 - **[코딩 스타일 이외에 개발/보안/프로젝트 관리/배포 등과 관련된 지침서](http://www.phptherightway.com)**
 - [Type Hinting in PhpStorm](https://blog.jetbrains.com/phpstorm/2016/07/php-7-support-in-phpstorm-2016-2/)
 - [Modern PHP](http://www.slideshare.net/wan2land/modern-php-64855200)
+
