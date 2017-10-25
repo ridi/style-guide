@@ -101,7 +101,7 @@ Pylint 설치 위치 확인
 - Preferences > Editor
   - Code Style
     - Line separator (for new files): Unix and OS X (\n)
-    - Right Margin (columns) : 120
+    - Right Margin (columns) : 140
   - Code Style > Python >  Other
     - (check) Add line feed at the end of file
     - (check) Use continuation indent for arguments
