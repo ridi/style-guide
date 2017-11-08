@@ -14,7 +14,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 2. Protected API
 
    - 세컨드파티 혹은 내부 직원만 사용 가능
-   - FQDN:
+   - FQDN:
      - 공인 IP가 있다면 `{team}-api.ridibooks.com`
      - 공인 IP가 없다면 `api.{team}.ridi.io`
    - 공인 IP를 가질 경우 보안 프로토콜(https)을 사용해야 함
@@ -37,6 +37,8 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 - 반드시 REST 혹은 GraphQL 기반으로 작성되어야 한다.
    - RPC/HTTP는 사용될 수 없다.
 - 반드시 통합테스트를 구축하고 자동화해야 한다.
+   - [Postman](https://www.getpostman.com/)
+   - [lightweight-rest-tester](https://github.com/ridibooks/lightweight-rest-tester)
 
 
 <br>
