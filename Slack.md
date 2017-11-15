@@ -36,7 +36,7 @@
 | -----------: | ----------------------------------- | ---------------------------------------- | ----- |
 | announcement | 전체 주요 공지사항                          | &#35;announcement                        | NO    |
 |      {team}- | 팀 내에서만 사용되는 채널                      | &#35;store-food<br>&#35;platform-devops  | MAYBE |
-|     hotline- | 부서간 긴급 소통                           | &#35;hotline-store-viewer                | NO    |
+|     hotline- | 부서간 긴급 소통<br>(부서 명은 알파벳 순서로)      | &#35;hotline-store-viewer                | NO    |
 |       guild- | 특정 관심사를 공유하는 길드 채널<br>(업무와 관련된)     | &#35;guild-frontend<br>&#35;guild-docker |       |
 |      lounge- | 특정 관심사를 공유하는 길드 채널<br>(업무와 관련되지 않은) | &#35;lounge-overwatch<br>&#35;lounge-jujunburi | MUST  |
 |        repo- | 특정 Git Repo 관련 정보 수신 채널             | &#35;repo-intranet<br>&#35;repo-cms      |       |
