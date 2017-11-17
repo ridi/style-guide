@@ -1,24 +1,6 @@
 # PHP 코딩 스타일
 
-[PSR-1/PSR-2](http://www.php-fig.org/)을 기본으로 하되 다음 규칙을 오버라이딩하여 따른다.
-
-
-
-## 수정 PSR-1
-
-- [4.2. Properties](http://www.php-fig.org/psr/psr-1/#42-properties)
-  - `$snake_case`만 사용
-
-
-
-## 수정 PSR-2
-
-- [2.3. Lines](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#23-lines)
-  - line length는 soft limit(120 characters per line)을 따름
-- [2.4. Indenting](https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#24-indenting)
-  - 신규로 추가되는 프로젝트는 space(4) 사용
-  - 레거시 코드는 tab(4) 사용
-
+[PSR-1/PSR-2/PSR-12](http://www.php-fig.org/)를 기본으로 하되 아래의 규칙을 추가적으로 따른다.
 
 
 
@@ -27,6 +9,7 @@
 ### 네이밍
 
 - 변수명은 $snake_case로 작성한다.
+  - 이는 [PSR-1 4.2. Properties](http://www.php-fig.org/psr/psr-1/#42-properties) 규칙을 보완한 것이다.
 - private 함수나 변수명에 _(underscore) prefix는 붙이지 않는다.
 
 ### 타입 지정
@@ -131,8 +114,6 @@
   - Code Style
     - Line separator (for new files): Unix and OS X (\n)
     - Right Margin (columns) : 120
-  - Code Style > PHP > Tabs and Indents
-    - ✅ Use tab character
   - Code Style > PHP > Other
     - ✅ Force short declaration style
   - File and Code Templates > Includes > File Header
