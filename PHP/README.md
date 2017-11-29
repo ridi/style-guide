@@ -14,14 +14,14 @@
 
 ### 타입 지정
 
-- 새로 작성하는 파일은 declare(strict_types=1) 적용
+- 새로 작성하는 파일은 `declare(strict_types=1)` 적용
 - PHPDoc보다 PHP 7의 타입 힌팅 기능을 우선적으로 사용
   - PHP 7.1 미만 버전에서 Nullable 선언이 필요한 경우에만 PHPDoc을 활용
-- 용도에 따른 null/false의 사용
-  - false는 boolean 형식의 표현에만 사용
-  - null은 "값이 없음"을 의미할 경우에만 사용
-  - 초기 PHP 내장 함수의 false를 리턴하는 관례를 따르지 말 것
-- 레퍼런스(&$var)의 사용
+- 용도에 따른 `null`/`false`의 사용
+  - `false`는 boolean 형식의 표현에만 사용
+  - `null`은 "값이 없음"을 의미할 경우에만 사용
+  - 초기 PHP 내장 함수의 `false`를 리턴하는 관례를 따르지 말 것
+- 레퍼런스(`&$var`)의 사용
   - 참조 반환은 사용하지 않는다.
   - 참조에 의한 전달은 closure 변수 바인딩만 허용
     ```php
@@ -34,13 +34,13 @@
 
 ### 내장 함수의 사용
 
-- 빈 값을 체크하는 경우 empty() 함수 사용
-  - 단, 변수의 값이 해당 변수 타입의 기본값과 같은 경우에는 empty()가 true를 리턴
-  - 예) string "0", int 0 등은 empty() 결과가 true
-  - 참고: empty, isset, is_null 함수의 [조건표](https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/)
-- 해당 변수가 set되었는지 확인하는 경우 isset() 함수 사용
-  - 주로 $arr['data'] 나 $obj->data가 존재하는지 체크할 때 isset($arr['data']) / isset($obj->data) 사용
-- compact() / extract() 사용금지
+- 빈 값을 체크하는 경우 `empty()` 함수 사용
+  - 단, 변수의 값이 해당 변수 타입의 기본값과 같은 경우에는 `empty()`가 `true`를 리턴
+  - 예) string "0", int 0 등은 `empty()` 결과가 `true`
+  - 참고: `empty`, `isset`, `is_null` 함수의 [조건표](https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/)
+- 해당 변수가 set되었는지 확인하는 경우 `isset()` 함수 사용
+  - 주로 `$arr['data']` 나 `$obj->data`가 존재하는지 체크할 때 `isset($arr['data'])` / `isset($obj->data)` 사용
+- `compact()` / `extract()` 사용금지
   - 선언되지 않은 변수를 참조할 경우 어떤 오류도 발생하지 않음
   - 변수를 암묵적으로 참조하므로 유지보수가 어려움
 
@@ -53,18 +53,18 @@
     - 'I will be back.' 
     - "I'll be back."
   - https://secure.php.net/language.types.string
-- 템플릿 문자열에서 curly brace({"$var"})의 사용
+- 템플릿 문자열에서 curly brace(`{"$var"}`)의 사용
   - IDE상에서 쉽게 식별이 가능하므로, 필요한 경우에만 괄호로 감쌀 것
 
 ### 비교문
 
-- == / === 의 사용
-  - 가능한 모든 경우에 ===를 사용, 그렇지 않을 경우에만 ==를 사용
+- `==` / `===` 의 사용
+  - 가능한 모든 경우에 `===`를 사용, 그렇지 않을 경우에만 `==`를 사용
 - 삼항 연산자 사용
   - 연산자가 포함된 경우에는 반드시 괄호를 사용
     - `next_page = ($end_page === $total_pages) ? $end_page : ($end_page + 1);`
 - 긴 조건문
-  - &&, || 등은 가장 앞에 위치시킬 것
+  - `&&`, `||` 등은 가장 앞에 위치시킬 것
   - 조건문이 여러줄일 경우 닫는 괄호와 brace는 새로운 줄에 위치시킬 것
     ```php
     if (someCondition1 !== null
@@ -77,7 +77,7 @@
 
 ### 배열
 
-- 항상 short array 문법([])을 사용할 것
+- 항상 short array 문법(`[]`)을 사용할 것
 
 
 
@@ -88,7 +88,7 @@
   - 최소 7.0 이상을 지원해야 함
   - 최신 안정화 버전까지 상위호환을 보장해야 함
 - 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용
-  - try ~ catch ~ finally, trait 등
+  - `try` ~ `catch` ~ `finally`, `trait` 등
   - Type Hinting은 최대한 활용
 
 
@@ -102,7 +102,7 @@
   - Composer의 [태그 명명 규칙](https://getcomposer.org/doc/articles/versions.md#tags)을 참고
 - 버전 관리 정책은 [Semantic Versioning](http://semver.org/)을 따를 것
   - SemVer를 통해 이 패키지에 의존하는 사용자들에게 새로운 기능이나 버그 픽스, 또는 하위 호환 여부를 명확하게 전달 가능
-- 하위호환 이슈가 발생할 경우 반드시 CHANGELOG에 기록을 남길 것
+- 하위호환 이슈가 발생할 경우 반드시 `CHANGELOG에 기록을 남길 것
   - 내용과 형식은 [Doctrine2](https://github.com/doctrine/doctrine2/blob/master/UPGRADE.md) 프로젝트를 참고
 
 
