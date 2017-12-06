@@ -43,8 +43,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 <br>
 
-## RESTful API 작성 가이드
-([Zalando의 RESTful API Guidelines](http://zalando.github.io/restful-api-guidelines/)를 참고하여 작성되었음)
+## HTTP API 작성 가이드
 
 - 첫 번째 Path Segment 는 서비스명으로 시작한다.
    - 예) 검색 서비스: ```api.ridibooks.com/search/```
@@ -96,5 +95,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 ### 참고
 
 - [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html/)
+- [Zalando의 RESTful API Guidelines](http://zalando.github.io/restful-api-guidelines/)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
 - [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
+- [그런 REST API로 괜찮은가](http://tv.naver.com/v/2292653)
