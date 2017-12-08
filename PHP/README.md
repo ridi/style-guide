@@ -114,7 +114,9 @@
   - Code Style
     - Line separator (for new files): Unix and OS X (\n)
     - Right Margin (columns) : 120
-  - Code Style > PHP > Other
+  - Code Style > PHP > Wrapping and Braces > 'if()' statement
+    - ✅ Place ')' on new line
+  - Code Style > PHP > Code Conversion
     - ✅ Force short declaration style
   - File and Code Templates > Includes > File Header
     - PHP File Header 의 내용을 비울 것
