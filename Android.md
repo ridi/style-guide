@@ -7,20 +7,10 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
 이 외에 차이점이나 추가 사항은 아래와 같다.
 
 ### 네이밍
-- Singleton object를 제외한 상수 및 변수의 이름은 모두 Camel case를 적용한다.
-
-### 콜론(:)의 사용
-- 타입과 슈퍼타입 사이에서 구분이 필요할 경우에는 콜론 앞뒤로 공백을 한 칸 넣는다.
-- 인스턴스와 타입 사이에서 구분이 필요할 경우에는 콜론의 뒤에만 공백을 한 칸 넣는다.
-- ex.
-
-  ```kt
-  class Foo : Bar { /*...*/ }
-  fun foo(a: Int): Bar { /*...*/ }
-  ```
+- Singleton object를 제외한 상수 및 변수의 이름은 모두 `camelCase`를 적용한다.
  
 ### 암시적 Unit
-- 함수가 특별히 쓸모 있는 값을 리턴하지 않을 경우, `Unit` 타입을 리턴한다(`void`가 없다). 
+- 함수가 특별히 쓸모 있는 값을 리턴하지 않을 경우, `Unit` object를 리턴한다(`void`가 없다). 
 - 이는 특별히 명시하지 않아도 동작하므로, 암시적으로만 사용한다.
 
 ### 기타
