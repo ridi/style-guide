@@ -94,7 +94,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 ### 참고
 
-- [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html/)
+- [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
 - [Zalando의 RESTful API Guidelines](http://zalando.github.io/restful-api-guidelines/)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
 - [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
