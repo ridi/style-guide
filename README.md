@@ -15,14 +15,14 @@
 - [Android](Android.md) - Kotlin, Java, XML 코딩 스타일
 - [iOS](iOS.md) - [Swift](Swift), Objective-C 코딩 스타일
 - [Qt](Qt.md) - C++, XML 코딩 스타일
+- [CMS 개발 가이드](CMS.md) - 내부 시스템 개발 가이드
 
 
-### Etc
+### Communication
 
 - [슬랙 사용 규칙](Slack.md)
-- [RESTful API](API.md) - RESTful API 작성 규칙
+- [HTTP API 작성 규칙](API.md)
 - [UI 텍스트 작성 가이드](UI/Text.md)
-- [CMS 개발 가이드](CMS.md)
 
 
 <br>
