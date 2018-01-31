@@ -38,6 +38,23 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - [Postman](https://www.getpostman.com/)
    - [lightweight-rest-tester](https://github.com/ridibooks/lightweight-rest-tester)
 
+
+<br>
+
+
+## 리소스 서버에서의 인가(Authorization)
+
+인가가 필요한 경우에는 JWT(JSON Web Tokens)를 이용할 수 있다.
+
+1. OAuth2 클라이언트의 요청은 HS256(HMAC SHA-256) 알고리즘으로 서명한다.
+   - 비밀키는 해당 클라이언트의 `client_secret`이어야 한다.
+2. 신뢰할 수 있는 서버로부터의 요청은 RS256(RSA Signature SHA-256) 알고리즘으로 서명한다.
+   - 마이크로서비스간의 리소스 요청이 이에 해당한다.
+   - 요청자(iss)와 주제(sub) 조합에 따라 구분되는 대칭키 쌍을 사용해야 한다.
+   - 비밀키의 보관은 요청 서버를 관리하는 팀에서 책임진다.
+3. JWT는 `Authentication`헤더의 `Bearer` 토큰으로 전달되어야 한다.
+
+
 <br>
 
 ## HTTP API 작성 가이드
@@ -92,7 +109,8 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 ### 참고
 
 - [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
-- [Zalando의 RESTful API Guidelines](http://zalando.github.io/restful-api-guidelines/)
+- [OAuth 2.0](https://oauth.net/2/)
+- [JWT](https://jwt.io/)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
 - [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
 - [그런 REST API로 괜찮은가](http://tv.naver.com/v/2292653)
