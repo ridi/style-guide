@@ -8,9 +8,9 @@
 
 ### 네이밍
 
-- 변수명은 $snake_case로 작성한다.
+- 변수명은 `$snake_case`로 작성한다.
   - 이는 [PSR-1 4.2. Properties](http://www.php-fig.org/psr/psr-1/#42-properties) 규칙을 보완한 것이다.
-- private 함수나 변수명에 _(underscore) prefix는 붙이지 않는다.
+- private 함수나 변수명에 `_`(underscore) prefix는 붙이지 않는다.
 
 ### 타입 지정
 
@@ -35,15 +35,12 @@
 ### 내장 함수의 사용
 
 - 빈 값을 체크하는 경우 `empty()` 함수 사용
-  - 단, 변수의 값이 해당 변수 타입의 기본값과 같은 경우에는 `empty()`가 `true`를 리턴
-  - 예) string "0", int 0 등은 `empty()` 결과가 `true`
   - 참고: `empty`, `isset`, `is_null` 함수의 [조건표](https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/)
 - 해당 변수가 set되었는지 확인하는 경우 `isset()` 함수 사용
   - 주로 `$arr['data']` 나 `$obj->data`가 존재하는지 체크할 때 `isset($arr['data'])` / `isset($obj->data)` 사용
 - `compact()` / `extract()` 사용금지
   - 선언되지 않은 변수를 참조할 경우 어떤 오류도 발생하지 않음
   - 변수를 암묵적으로 참조하므로 유지보수가 어려움
-
 
 ### 문자열
 
@@ -78,35 +75,29 @@
 #### 에러 제어 연산자
 - [Error Control Operator(`@`)](http://php.net/manual/en/language.operators.errorcontrol.php)는 사용하지 않는다.
 
-
 ### 배열
 
 - 항상 short array 문법(`[]`)을 사용할 것
 
+### 클래스
 
-
-## 사용 PHP 버전
-
-- 팀 외부에 공유되는 Composer 패키지는,
-  - 최소 7.0 이상을 지원해야 함
-  - 최신 안정화 버전까지 상위호환을 보장해야 함
-- 언어의 최신 스펙(문법, 예약어, 리터럴)은 적극 활용
-  - `try` ~ `catch` ~ `finally`, `trait` 등
-  - Type Hinting은 최대한 활용
+- [Late Static Bindings](http://php.net/manual/kr/language.oop5.late-static-bindings.php)는 사용하지 않는다.
 
 
 
 
-## 패키지 버저닝 및 릴리즈
+## 의존성 관리 ([Composer](https://getcomposer.org/))
 
-- 외부에서 참조될 필요가 있는 코드는 언제나 [Composer](https://getcomposer.org/) 기반으로 관리
+- 패키지명은 `ridibooks/`로 시작해야 함
+- 공개용 패키지는 [Packagist](https://packagist.org/)에 등록하고, Maintainer로 `ridibooks`를 추가
+- 내부용 패키지는 [Satis](https://satis.ridi.io/)에서 관리 ([README](https://gitlab.ridi.io/common/satis/blob/master/README.md) 참고)
 - 배포되는 버전은 반드시 명시적인 Git 태그를 사용하여 지정
   - 커밋 레퍼런스(`#commit-ref`)를 통한 버전 관리는 [Composer에서 사용하지 말 것을 권장](https://github.com/composer/composer/blob/1.5/doc/articles/troubleshooting.md#i-have-locked-a-dependency-to-a-specific-commit-but-get-unexpected-results)하고 있음
   - Composer의 [태그 명명 규칙](https://getcomposer.org/doc/articles/versions.md#tags)을 참고
 - 버전 관리 정책은 [Semantic Versioning](http://semver.org/)을 따를 것
   - SemVer를 통해 이 패키지에 의존하는 사용자들에게 새로운 기능이나 버그 픽스, 또는 하위 호환 여부를 명확하게 전달 가능
-- 하위호환 이슈가 발생할 경우 반드시 `CHANGELOG에 기록을 남길 것
-  - 내용과 형식은 [Doctrine2](https://github.com/doctrine/doctrine2/blob/master/UPGRADE.md) 프로젝트를 참고
+  - 하위호환 이슈가 발생할 경우 반드시 `CHANGELOG`에 기록을 남길 것
+  - 내용과 형식은 [Doctrine2](https://github.com/doctrine/doctrine2/blob/master/UPGRADE.md) 프로젝트 참고
 
 
 
@@ -137,12 +128,6 @@
 
 ## PHP CodeSniffer 사용
 
-- Mac에서 설치방법
-  ```bash
-  brew tap homebrew/homebrew-php
-  brew install homebrew/php/php70
-  brew install homebrew/php/php-code-sniffer
-  ```
 - PhpStrom 설정법
   - Preferences > Languages & Frameworks > PHP > Code Sniffer
     Configuration 오른편 [...] 버튼을 누르고 PHP Code Sniffer path에 phpcs경로 설정
@@ -156,20 +141,7 @@
 
 
 
-## Proposed
-
-- [Late Static Bindings](http://php.net/manual/kr/language.oop5.late-static-bindings.php) 사용 금지
-  - `static::` 키워드 사용 금지
-- return type declations 항상 작성 (플랫폼팀 규약)
-  - [http://php.net/manual/kr/functions.returning-values.php#functions.returning-values.type-declaration](http://php.net/manual/kr/functions.returning-values.php#functions.returning-values.type-declaration)
-  - null returnable 할 경우 phpdoc으로 작성(php7.1 에서는 지원예정)
-
-
-
-
 ## 참고 자료
 
 - **[코딩 스타일 이외에 개발/보안/프로젝트 관리/배포 등과 관련된 지침서](http://www.phptherightway.com)**
-- [Type Hinting in PhpStorm](https://blog.jetbrains.com/phpstorm/2016/07/php-7-support-in-phpstorm-2016-2/)
-- [Modern PHP](http://www.slideshare.net/wan2land/modern-php-64855200)
-
+- [Guide to Building Secure PHP Software](https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software)
