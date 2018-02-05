@@ -21,24 +21,13 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
 
 [Android Studio 설정 파일](IDE/AndroidStudio/CodeStyle.xml)
  
-안드로이드 오픈소스 프로젝트(AOSP)의 [Code Style Guidelines for Contributors](http://source.android.com/source/code-style.html)를 따른다.
+[Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)를 따른다.
 이 외에 차이점이나 추가 사항은 아래와 같다.
 
-- Indentation
-  - Tab policy: Spaces only (Space만을 사용하고 들여쓰기는 4 spaces를 사용한다.)
-- Naming
-  - Field Prefixes: none (IDE에서 구분이 가능하므로 m이나 s 등의 prefix 붙이지 않음.)
-  - Interface Prefixes: none
-- Brace Style
-  - brace 내 코드가 한줄이더라도 brace로 반드시 감싸는 것으로 한다.
-
-  ```java
-  class foo {}
-  if (condition) {
-      doSomething();
-  }
-  ```
-
+- 들여쓰기
+  - Block 들여쓰기는 +4 spaces
+  - Line-wrapping 들여쓰기는 최소 +8 spaces
+- Static import는 사용하지 않는다.
 
 ## 공통 코딩 스타일
 
