@@ -112,3 +112,17 @@ Pylint 설치 위치 확인
     - Program: which 로 찾은 경로 입력
     - Parameters: $FilePath$
   - Tools > External Tools > Pylint 체크되어 있는지 확인
+
+## PyPI
+
+- Python 패키지 배포시 [PyPI](https://pypi.python.org/pypi)를 이용한다.
+- PyPI의 `ridi` 계정을 등록한 패키지의 Owner로 추가한다.
+- PyPI에 등록하는 패키지명(setup.py의 `name`필드)은 `ridi-`로 시작하고 여러 단어로 이름지어진 경우 `-`(하이픈)으로 구분한다.
+    - ex) `ridi-cms-sdk`
+- PyPI의 패키지명과 import시 사용하는 패키지명은 가급적 일치시키되, import 이름에는 `-`를 사용하지 않는다.
+- Root 패키지 이름은 `ridi`를 사용한다.
+    ```python
+    # PyPI: ridi-cms-sdk
+    # Directory tree: ridi/cms
+    from ridi.cms import CmsClient
+    ```
