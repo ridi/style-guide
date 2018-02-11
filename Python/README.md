@@ -6,25 +6,13 @@
 
 ## 추가 규칙
 - 리스트, 튜플, 딕셔너리 사용시 마지막에 ,(trailing commas)를 붙인다.
+  - 데이터 추가시 diff 보기에 편하다.
 
-    - 데이터 추가시 diff 보기에 편하다.
-
-- 파이썬 패키지에서 \_\_init\_\_.py를 만들지 않는다.
-
-- 예외 Exception
-
-  - 예외는 항상 클래스로 만들어서 사용한다.
-
-- import
-  - PyCharm의 Code > Optimize Imports 기능을 수행한다.
-
-- 상속
-  - 다중상속의 개념은 사용하지 않는다.
-  - Mixin으로 사용할 경우 부모 클래스를 가장 마지막에 적는다.
-    - ex) Child(Mixin1, Mixin2, Parent)
+- Mixin으로 사용할 경우 부모 클래스를 가장 마지막에 적는다.
+  - ex) Child(Mixin1, Mixin2, Parent)
 
 - 가독성 관련
-    - 반복문과 분기를 한 라인이 같이 담는 식의 코드를 작성하지 않는다.
+  - 반복문과 분기를 한 라인이 같이 담는 식의 코드를 작성하지 않는다.
 
     ```python
     # Bad
@@ -42,19 +30,19 @@
 ## 변경 규칙
 - 1행에 140자까지 사용한다.
 - 줄바꿈, 공백
-  - 함수 인자 (아래 둘다 된다., _ 는 공백을 나타낸다.)
+  - 함수 인자 (아래 둘다 된다)
 
     ```
     foo = long_function_name(
-    ________var_one, var_two,
-    ________var_three, var_four
-    ________)
+            var_one, var_two,
+            var_three, var_four
+            )
     print(var_one)
     ```
     ```
     foo = long_function_name(
-    ________ var_one, var_two, var_three, var_four
-    ________)
+            var_one, var_two, var_three, var_four
+            )
     print(var_one)
     ```
 
@@ -66,25 +54,25 @@
 - 클래스
   - 클래스에서 private 멤버나 메소드는 이름 앞에 밑줄을 추가한다.
 - 비교
-  - None과 비교, Boolean 비교는 is, is not 을 사용한다.
-  - Boolean 비교: if not is_ok:
-  - 객체의 타입을 비교할 때는 isinstance() 를 사용한다.
+  - `None`과 비교, `Boolean` 비교는 `is`, `is not` 을 사용한다.
+  - `Boolean` 비교: `if not is_ok`:
+  - 객체의 타입을 비교할 때는 `isinstance()`를 사용한다.
 - 문자열
   - string 모듈보다는 string 메소드를 사용한다.
     - 메소드가 모듈보다 빠르고 유니코드 문자열에 대해 같은 API 를 공유한다.
-  - 접두사나 접미사를 검사할 때는 startswith()와 endwith()를 사용한다.
+  - 접두사나 접미사를 검사할 때는 `startswith()`와 `endswith()`를 사용한다.
 - 이름규칙
-  - module_name
-  - package_name
-  - ClassName
-  - method_name
-  - ExceptionName
-  - function_name
-  - GLOBAL_CONSTANT_NAME
-  - global_var_name
-  - instance_var_name
-  - function_parameter_name
-  - local_var_name
+  - `module_name`
+  - `package_name`
+  - `ClassName`
+  - `method_name`
+  - `ExceptionName`
+  - `function_name`
+  - `GLOBAL_CONSTANT_NAME`
+  - `global_var_name`
+  - `instance_var_name`
+  - `function_parameter_name`
+  - `local_var_name`
 
 
 ## Pylint
@@ -113,7 +101,8 @@ Pylint 설치 위치 확인
     - Parameters: $FilePath$
   - Tools > External Tools > Pylint 체크되어 있는지 확인
 
-## PyPI
+
+## 패키지 관리
 
 - Python 패키지 배포시 [PyPI](https://pypi.python.org/pypi)를 이용한다.
 - PyPI의 `ridi` 계정을 등록한 패키지의 Owner로 추가한다.
