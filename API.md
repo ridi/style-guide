@@ -74,7 +74,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 ## 내부 서비스간의 SSO
 
 마이크로 서비스에서 SSO(Single Sign On)방법으로 OAuth2를 사용하도록 한다. 
-이 때 Access token은 JWT(JSON Web Tokens)를 통해 제공되며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
+이 때 Access token은 JWT(JSON Web Tokens) 형태로 발급되며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
 
 - HS256(HMAC SHA-256) 알고리즘으로 서명
    - 키는 OAuth2서버와 리소스서버가 공유한다.
