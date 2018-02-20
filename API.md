@@ -78,7 +78,6 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 - HS256(HMAC SHA-256) 알고리즘으로 서명
    - 키는 OAuth2서버와 리소스서버가 공유한다.
-   - Token Introspection 은 리소스서버에서 JWT 서명 확인으로 대체한다.
 - 아래의 claim들이 payload에 제공되어야 한다
 ```
 sub: user_id
