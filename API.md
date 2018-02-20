@@ -80,11 +80,11 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - 키는 OAuth2서버와 리소스서버가 공유한다.
 - 아래의 claim들이 payload에 제공되어야 한다
 ```
-sub: user_id
-uid: user_idx
-exp: expire at
-client_id: client id
-scope: scopes (delimiter: space)
+sub: 유저 아이디(user_id)
+uid: 유저 index(user_idx)
+exp: 토큰 만료시간 (형태는 unixtimestamp)
+client_id: 등록한 애플리케이션의 아이디
+scope: 요청 데이터의 접근 가능 범위 (공백으로 구분)
 ```
 
 예) 
