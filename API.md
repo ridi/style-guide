@@ -71,15 +71,15 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 <br>
 
-## Oauth2 - Access token
+## OAuth2 - Access token
 
-마이크로 서비스에서 SSO(Single Sign On)방법으로 Oauth2를 사용하도록 한다. 
+마이크로 서비스에서 SSO(Single Sign On)방법으로 OAuth2를 사용하도록 한다. 
 이 때 Access token은 JWT(JSON Web Tokens)를 통해 제공되며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
 
 - HS256(HMAC SHA-256) 알고리즘으로 서명
-  - 키는 Oauth서버와 Resource서버가 공유한다.
-  - Token Introspection 은 Resource서버에서 JWT 서명 확인으로 대체한다.
-- 아래의 데이터가 payload에 제공되어야 한다.
+   - 키는 OAuth2서버와 리소스서버가 공유한다.
+   - Token Introspection 은 리소스서버에서 JWT 서명 확인으로 대체한다.
+- 아래의 claim들이 payload에 제공되어야 한다
 ```
 sub: user_id
 uid: user_idx
