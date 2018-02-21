@@ -71,6 +71,38 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 <br>
 
+## 내부 서비스간의 SSO
+
+마이크로서비스 환경에서 최종사용자의 SSO(Single Sign-On)를 지원하기 위해 OAuth2를 사용한다.
+이 때 access token은 JWT(JSON Web Tokens) 형태로 발급되며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
+
+- HS256(HMAC SHA-256) 알고리즘으로 서명
+  - 키는 OAuth2 서버와 리소스 서버가 공유
+- 아래의 claim들이 payload에 제공되어야 함
+  - sub: 리소스 소유자의 리디북스 ID
+  - u_idx: 리소스 소유자의 고유 식별자(user_idx)
+  - exp: 유닉스 시간으로 표현된 토큰 만료시간
+  - client_id: 사전에 약속된 OAuth2 클라이언트 ID
+  - scope: 토큰이 허용하는 인가 범위 (공백으로 구분)
+
+예) 
+```
+{ // header
+  "typ": "JWT",
+  "alg": "HS256"
+}
+{ // payload
+  "sub": "antiline",
+  "u_idx": 12312233,
+  "exp": 1518505258,
+  "client_id": "**given_client_id**",
+  "scope": "all"
+}
+```
+
+
+<br>
+
 ## HTTP API 작성 가이드
 
 - 첫 번째 Path Segment 는 서비스명으로 시작한다.
