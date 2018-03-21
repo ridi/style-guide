@@ -88,8 +88,8 @@
 
 ## 의존성 관리 ([Composer](https://getcomposer.org/))
 
-- 패키지명은 `ridibooks/`로 시작해야 함
-- 공개용 패키지는 [Packagist](https://packagist.org/)에 등록하고, Maintainer로 `ridibooks`를 추가
+- 패키지 네임스페이스는 `ridibooks` 혹은 `ridi`여야 함
+- 공개용 패키지는 [@ridi/performance](https://github.com/orgs/ridi/teams/performance) 팀에 요청하여 [Packagist](https://packagist.org/)에 등록
 - 내부용 패키지는 [Satis](https://satis.ridi.io/)에서 관리 ([README](https://gitlab.ridi.io/common/satis/blob/master/README.md) 참고)
 - 배포되는 버전은 반드시 명시적인 Git 태그를 사용하여 지정
   - 커밋 레퍼런스(`#commit-ref`)를 통한 버전 관리는 [Composer에서 사용하지 말 것을 권장](https://github.com/composer/composer/blob/1.5/doc/articles/troubleshooting.md#i-have-locked-a-dependency-to-a-specific-commit-but-get-unexpected-results)하고 있음
