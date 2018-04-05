@@ -105,18 +105,26 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 ## HTTP API 작성 가이드
 
-- 첫 번째 Path Segment 는 서비스명으로 시작한다.
-   - 예) 검색 서비스: ```api.ridibooks.com/search/```
-   - 예) 책 상세 서비스: ```api.ridibooks.com/books/```
+- 첫 번째 Path Segment는 서비스명으로 시작한다.
+  - 예) 검색 서비스: ```api.ridibooks.com/search/```
+  - 예) 책 상세 서비스: ```api.ridibooks.com/books/```
  
-- Path Segments 를 표현할 때에는 [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles) 를 사용할 것
-   - 예) ```/reading-notes/{b_id}```
+- Path Segments를 표현할 때에는 [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles) 를 사용할 것
+  - 예) ```/reading-notes/{b_id}```
    
-- Query Parameters 에는 snake_case 를 사용할 것
+- Query Parameters에는 snake_case 를 사용할 것
  
 - Trailing Slashes 를 사용하지 말 것
-   - slash 를 사용한 경우와 사용하지 않은 경우 같은 결과를 반환해야 하고, / 를 붙이지 않는 것을 원칙으로 한다.
-   
+  - slash 를 사용한 경우와 사용하지 않은 경우 같은 결과를 반환해야 하고, / 를 붙이지 않는 것을 원칙으로 한다.
+
+- API의 버전 관리를 위해 Path Segment에 `/v1`, `/v2` 따위를 포함하지 말 것
+  - 다양한 버전을 관리하는 것은 테스트 및 유지보수 측면에서 매우 복잡하고 어려운 일이다.
+  - 가장 좋은 것은 [API 버전을 관리하지 않는 것](https://martinfowler.com/articles/enterpriseREST.html#versioning)이며, 아래의 두 가지 방법을 우선적으로 고려한다.
+    1. 기존 리소스가 변형된 형태의 새로운 리소스를 정의
+    2. 새로운 서비스 엔드포인트를 정의
+  - 부득이 버전을 관리해야 한다면 HTTP `Content-Type` 헤더를 통한 Media Type 버저닝을 할 것
+    - 예) `Accept: application/vnd.ridibooks.cart+json;version=2`
+
 - Level 2 이상의 REST Maturity Model을 구현할 것
    - https://martinfowler.com/articles/richardsonMaturityModel.html#level2
 
