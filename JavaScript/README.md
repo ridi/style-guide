@@ -39,17 +39,10 @@ Languages & Frameworks > Javascript > Code Quality Tools > ESLint 선택
 
 ## 패키지 관리 ([npm](https://www.npmjs.com))
 
-- 패키지 이름(`package.json`의 `name` 필드)은 `ridi` 스코프를 사용한다. e.g. `"name": "@ridi/my-package"`.
+- 패키지 이름(`package.json`의 `name` 필드)은 `ridi` 스코프를 사용한다.
+  -  e.g. `"name": "@ridi/my-package"`
 - 패키지 버전(`package.json`의 `version` 필드)은 [Semantic Versioning](https://semver.org)을 따른다.
 - 패키지 배포시 [npm](https://www.npmjs.com)을 이용한다.
   - 현재는 공개 배포만 가능하므로 `npm publish --access public` 명령으로 배포한다.
-  - npm에 한번 배포된 버전은 삭제되어도 같은 버전으로 재배포가 불가능하다. 따라서 배포 전 [로컬 설치](https://docs.npmjs.com/misc/developers#before-publishing-make-sure-your-package-installs-and-works)를 통해 정상적으로 파일들이 포함되는 지 확인할 것을 권장한다.  
-- 배포 권한이 없을 경우 [@ridi/performance](https://github.com/orgs/ridi/teams/performance)팀에 요청하여 [ridi organization](https://www.npmjs.com/org/ridi)에 계정을 등록한다.  
-
-
-## 참고
-
-* [JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/ko/) - JavaScript 언어의 핵심에 대한 내용이 있는 문서. 일독 권장
-* [ESLint 활용하기](http://damian.dziaduch.pl/2015/11/25/eslint-install-and-config-phpstormwebstorm-and-git-pre-commit-hook/) - ESLint 설치 및 IDE, git hook 연동 가이드.
-* [developers | npm Documentation](https://docs.npmjs.com/misc/developers) - npm을 이용한 개발 및 배포 가이드.
-* [package.json | npm Documentation](https://docs.npmjs.com/files/package.json) - `package.json` 파일 스펙 문서.
+  - npm에 한번 배포된 버전은 삭제되어도 같은 버전으로 재배포가 불가능하다. 따라서 배포 전 [로컬 설치](https://docs.npmjs.com/misc/developers#before-publishing-make-sure-your-package-installs-and-works)를 통해 정상적으로 파일들이 포함되는지 확인할 것.
+- 배포 권한이 없을 경우 [@ridi/performance](https://github.com/orgs/ridi/teams/performance)팀에 요청하여 [ridi organization](https://www.npmjs.com/org/ridi)에 계정을 등록한다.
