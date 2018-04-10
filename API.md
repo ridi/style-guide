@@ -6,9 +6,10 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
    - 서드파티 혹은 임의의 개인이 사용 가능
    - FQDN: `api.ridibooks.com`
-   - 하위 호환은 최소 6개월 이상 유지
+     - 도메인은 API Gateway에 연결되어 있으며, 변경 필요시 [@ridi/performance](https://github.com/orgs/ridi/teams/performance) 팀에 요청
    - 보안 프로토콜(TLS/SSL)을 사용해야 함 외부에 공개
-   - 인증에는 OAuth 2.0을 사용해야 함
+   - 인증에는 OAuth 2.0을 사용
+     - [인증 서버 구현체](https://github.com/ridi/account) 및 [Python](https://github.com/ridi/django-oauth2), [PHP](https://github.com/ridi/php-oauth2) 미들웨어 참고
 
 2. Protected API
 
@@ -17,7 +18,6 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
      - 공인 IP가 있다면 `{team}-api.ridibooks.com`
      - 공인 IP가 없다면 `api.{team}.ridi.io`
    - 공인 IP를 가질 경우 보안 프로토콜(TLS/SSL)을 사용해야 함
-   - 하위호환은 최대 3개월까지 유지
    - 클라이언트 라이브러리가 필요한 경우 **사용하는 팀에서** 직접 작성
 
 3. Private API
@@ -33,7 +33,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 - HTTP 1.1 이상을 지원해야 한다.
 - REST 혹은 GraphQL 기반으로 작성되어야 한다.
-- [Swagger](https://swagger.io/) 형식의 스펙문서를 제공해야 한다.
+- [OpenAPI](https://swagger.io/specification/) 형식의 스펙문서를 제공해야 한다.
 - 통합테스트를 구축하고 자동화해야 한다.
    - [Postman](https://www.getpostman.com/)
    - [lightweight-rest-tester](https://github.com/ridibooks/lightweight-rest-tester)
