@@ -7,7 +7,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - 서드파티 혹은 임의의 개인이 사용 가능
    - FQDN: `api.ridibooks.com`
      - 도메인은 API Gateway에 연결되어 있으며, 변경 필요시 [@ridi/performance](https://github.com/orgs/ridi/teams/performance) 팀에 요청
-   - 보안 프로토콜(TLS/SSL)을 사용해야 함 외부에 공개
+   - 보안 프로토콜(TLS/SSL)을 사용해야 함
    - 인증에는 OAuth 2.0을 사용
      - [인증 서버 구현체](https://github.com/ridi/account) 및 [Python](https://github.com/ridi/django-oauth2), [PHP](https://github.com/ridi/php-oauth2) 미들웨어 참고
 
