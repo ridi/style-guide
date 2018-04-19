@@ -1,13 +1,13 @@
 
 # Android 코딩 스타일
 
-[Android Studio Code style 설정 파일](Android/CodeStyle.xml)
+[Android Studio Code style 설정 파일](AndroidStudio/CodeStyle.xml)
 
-[Android Studio Inspection profile 설정 파일](Android/InspectionProfile.xml)
+[Android Studio Inspection profile 설정 파일](AndroidStudio/InspectionProfile.xml)
 
 ## Kotlin 코딩 스타일
 
-[ktlint](https://github.com/shyiko/ktlint) [EditorConfig 파일](Android/.editorconfig)
+[ktlint](https://github.com/shyiko/ktlint) [EditorConfig 파일](.editorconfig)
 
 Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference/coding-conventions.html)을 따른다.
 이 외에 차이점이나 추가 사항은 아래와 같다.
