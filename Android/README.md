@@ -1,31 +1,27 @@
 
 # Android 코딩 스타일
 
+[EditorConfig 파일](.editorconfig)
+
 [Android Studio Code style 설정 파일](AndroidStudio/CodeStyle.xml)
 
 [Android Studio Inspection profile 설정 파일](AndroidStudio/InspectionProfile.xml)
 
 ## Kotlin 코딩 스타일
 
-[ktlint](https://github.com/shyiko/ktlint) [EditorConfig 파일](.editorconfig)
+Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference/coding-conventions.html)과 [Android Kotlin Guides](https://android.github.io/kotlin-guides/style.html)를 따른다. 차이점이나 추가 사항은 아래와 같다.
 
-Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference/coding-conventions.html)을 따른다.
-이 외에 차이점이나 추가 사항은 아래와 같다.
-
-### 네이밍
+- Column limit은 120을 사용한다.
 - Singleton object를 제외한 상수 및 변수의 이름은 모두 `camelCase`를 적용한다.
- 
-### 기타
-- 특별히 명시되지 않은 부분은 기본적으로 아래 Java의 convention을 따르도록 한다.
+- 특별히 명시되지 않은 부분은 기본적으로 Java의 convention을 따르도록 한다.
 
 ## Java 코딩 스타일
 
 [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)를 따른다.
 이 외에 차이점이나 추가 사항은 아래와 같다.
 
-- 들여쓰기
-  - Block 들여쓰기는 +4 spaces
-  - Line-wrapping 들여쓰기는 최소 +8 spaces
+- Column limit은 120을 사용한다.
+- Block indentation은 +4 spaces를 사용한다.
 - Static import는 사용하지 않는다.
 
 ## 공통 코딩 스타일
