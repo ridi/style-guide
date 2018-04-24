@@ -39,6 +39,7 @@
 
 - 소문자 snake_case 를 사용
 - 변경내역 추적을 위한 컬럼의 타입은 `DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` 사용
+- 컬럼 코멘트 반드시 작성
 
 #### 컬럼 자료형 규칙
 
@@ -46,7 +47,7 @@
   - 컬럼명은 id
     - 일부 오래된 테이블에는 idx, pk_id라는 컬럼명을 사용하고 있는데, 이는 규칙에 어긋남
   - `UNSIGNED INT(10)` 혹은 `UNSIGNED BIGINT(20)`을 사용
-  - 반드시 not null, primary key, auto increment 속성을 지정
+  - 반드시 not null, unsigned, primary key, auto increment 속성을 지정
 
 - Index의 사용
 
