@@ -3,8 +3,9 @@
 [PSR-1/PSR-2/PSR-12](http://www.php-fig.org/)를 기본으로 하되 아래의 규칙을 추가적으로 따른다.
 
 
-
 ## 추가 규칙
+
+최소 지원 버전은 7.1이다.
 
 ### 네이밍
 
@@ -15,8 +16,7 @@
 ### 타입 지정
 
 - 새로 작성하는 파일은 `declare(strict_types=1)` 적용
-- PHPDoc보다 PHP 7의 타입 힌팅 기능을 우선적으로 사용
-  - PHP 7.1 미만 버전에서 Nullable 선언이 필요한 경우에만 PHPDoc을 활용
+- PHPDoc보다 내장 타입 힌팅을 우선하여 사용
 - 용도에 따른 `null`/`false`의 사용
   - `false`는 boolean 형식의 표현에만 사용
   - `null`은 "값이 없음"을 의미할 경우에만 사용
