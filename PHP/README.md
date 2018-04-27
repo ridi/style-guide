@@ -36,9 +36,9 @@
 
 - 빈 값을 체크하는 경우 `empty()` 함수 사용
   - 참고: `empty`, `isset`, `is_null` 함수의 [조건표](https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/)
-- `isset()` 함수는 변수가 존재하는지 확인할 때만 사용
-  - 주로 `$arr['data']` 나 `$obj->data`가 존재하는지 체크할 때 `isset($arr['data'])` / `isset($obj->data)` 사용
-  - 'Not null'의 판단만 필요한 상황에서는 사용 금지
+- `isset()` 함수는 참조하려는 대상이 분명히 초기화 된 상황에서는 사용하지 않는다.
+  - 주로 array key나 instance variable이 존재하는지 체크할 때 `isset($arr['key'])` / `isset($obj->field)`로 사용
+  - 초기화 여부 검증이 필요 없이 'Not null'의 판단만 필요한 상황에서는 사용 금지
 - `compact()` / `extract()` 사용금지
   - 선언되지 않은 변수를 참조할 경우 어떤 오류도 발생하지 않음
   - 변수를 암묵적으로 참조하므로 유지보수가 어려움
