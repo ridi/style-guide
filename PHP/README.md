@@ -9,9 +9,9 @@
 
 ### 네이밍
 
-- 변수명은 `$snake_case`로 작성한다.
+- 변수명은 `$snake_case`로 작성
   - 이는 [PSR-1 4.2. Properties](http://www.php-fig.org/psr/psr-1/#42-properties) 규칙을 보완한 것이다.
-- private 함수나 변수명에 `_`(underscore) prefix는 붙이지 않는다.
+- private 함수나 변수명에 `_`(underscore) prefix는 붙이지 말 것
 
 ### 타입 지정
 
@@ -22,7 +22,7 @@
   - `null`은 "값이 없음"을 의미할 경우에만 사용
   - 초기 PHP 내장 함수의 `false`를 리턴하는 관례를 따르지 말 것
 - 레퍼런스(`&$var`)의 사용
-  - 참조 반환은 사용하지 않는다.
+  - 참조 반환은 사용하지 말 것
   - 참조에 의한 전달은 closure 변수 바인딩만 허용
     ```php
     $db->transactional(
@@ -36,10 +36,9 @@
 
 - 빈 값을 체크하는 경우 `empty()` 함수 사용
   - 참고: `empty`, `isset`, `is_null` 함수의 [조건표](https://www.virendrachandak.com/techtalk/php-isset-vs-empty-vs-is_null/)
-- `isset()` 함수는 참조하려는 대상이 분명히 초기화 된 상황에서는 사용하지 않는다.
-  - 주로 array key나 instance variable이 존재하는지 체크할 때 `isset($arr['key'])` / `isset($obj->field)`로 사용
-  - 초기화 여부 검증이 필요 없이 'Not null'의 판단만 필요한 상황에서는 사용 금지
-- `compact()` / `extract()` 사용금지
+- 참조하려는 대상이 명백히 초기화된 경우 `isset()` 함수 사용 금지
+  - `isset`은 undefined와 `NULL`을 구분할 수 없기 때문
+- `compact()` / `extract()` 사용 금지
   - 선언되지 않은 변수를 참조할 경우 어떤 오류도 발생하지 않음
   - 변수를 암묵적으로 참조하므로 유지보수가 어려움
 
@@ -73,8 +72,9 @@
         /* ... */
     }
     ```
+
 #### 에러 제어 연산자
-- [Error Control Operator(`@`)](http://php.net/manual/en/language.operators.errorcontrol.php)는 사용하지 않는다.
+- [Error Control Operator(`@`)](http://php.net/manual/en/language.operators.errorcontrol.php) 사용 금지
 
 ### 배열
 
@@ -82,7 +82,7 @@
 
 ### 클래스
 
-- [Late Static Bindings](http://php.net/manual/kr/language.oop5.late-static-bindings.php)는 사용하지 않는다.
+- [Late Static Bindings](http://php.net/manual/kr/language.oop5.late-static-bindings.php) 사용 금지
 
 
 
