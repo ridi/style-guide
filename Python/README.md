@@ -106,12 +106,11 @@ Pylint 설치 위치 확인
 
 ### Library 개발시
 
-- 패키지 배포가 필요하다면 [PyPI](https://pypi.python.org)를 이용한다.
-- PyPI의 `ridi` 계정을 등록한 패키지의 Owner로 추가한다.
+- [PyPI](https://pypi.python.org)에 배포후 `ridi` 계정을 등록한 패키지의 Owner로 추가한다.
 - PyPI에 등록하는 패키지명(setup.py의 `name`필드)은 `ridi-`로 시작하고 여러 단어로 이름지어진 경우 `-`(하이픈)으로 구분한다.
     - ex) `ridi-cms-sdk`
 - PyPI의 패키지명과 import시 사용하는 패키지명은 가급적 일치시키되, import 이름에는 `-`를 사용하지 않는다.
-- Root 패키지 이름은 `ridi`를 사용한다.
+- 최상위 패키지 이름은 `ridi`를 사용한다.
     ```python
     # PyPI: ridi-cms-sdk
     # Directory tree: ridi/cms
@@ -120,5 +119,5 @@ Pylint 설치 위치 확인
 
 ### Application 개발시
 
-- Root에 폴더 또는 패키지 이름으로 `ridi`를 사용하지 않는다.
-  - 이 경우 PyPI에 배포된 패키지와 [이름이 충돌 할 수 있다](http://ncoghlan-devs-python-notes.readthedocs.io/en/latest/python_concepts/import_traps.html#the-init-py-trap).
+- 최상위 폴더 또는 패키지 이름으로 `ridi`를 사용하지 않는다.
+  - 사내 Library의 최상위 패키지 이름이 `ridi`이므로 같은 이름을 사용하면 [import 오류가 발생할수 있다](http://ncoghlan-devs-python-notes.readthedocs.io/en/latest/python_concepts/import_traps.html#the-init-py-trap).
