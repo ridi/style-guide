@@ -12,6 +12,7 @@
 Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference/coding-conventions.html)과 [Android Kotlin Guides](https://android.github.io/kotlin-guides/style.html)를 따른다. 차이점이나 추가 사항은 아래와 같다.
 
 - Column limit은 120을 사용한다.
+- Boolean을 부정할 때는 ! 대신 not()을 사용한다.
 - 특별히 명시되지 않은 부분은 기본적으로 Java의 convention을 따르도록 한다.
 
 ## Java 코딩 스타일
