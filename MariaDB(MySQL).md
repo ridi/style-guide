@@ -46,8 +46,8 @@
 - Primary Key는 항상 명시적으로 정의
   - 컬럼명은 id
     - 일부 오래된 테이블에는 idx, pk_id라는 컬럼명을 사용하고 있는데, 이는 규칙에 어긋남
-  - `UNSIGNED INT(10)` 혹은 `UNSIGNED BIGINT(20)`을 사용
-  - 반드시 not null, unsigned, primary key, auto increment 속성을 지정
+  - `INT(10) UNSIGNED` 혹은 `BIGINT(20) UNSIGNED`을 사용
+  - 반드시 primary key, auto increment 속성을 지정
 
 - Index의 사용
 
