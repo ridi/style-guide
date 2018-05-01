@@ -120,4 +120,4 @@ Pylint 설치 위치 확인
 ### Application 개발시
 
 - 최상위 폴더 또는 패키지 이름으로 `ridi`를 사용하지 않는다.
-  - 사내 Library의 최상위 패키지 이름이 `ridi`이므로 같은 이름을 사용하면 [import 오류가 발생할수 있다](http://ncoghlan-devs-python-notes.readthedocs.io/en/latest/python_concepts/import_traps.html#the-init-py-trap).
+  - 사내 Library의 최상위 패키지 이름이 `ridi`이므로 [import 트랩](http://ncoghlan-devs-python-notes.readthedocs.io/en/latest/python_concepts/import_traps.html#the-init-py-trap)가 발생할 수 있다.
