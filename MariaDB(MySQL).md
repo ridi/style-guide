@@ -39,7 +39,6 @@
 
 - 소문자 snake_case 를 사용
 - 변경내역 추적을 위한 컬럼의 타입은 `DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` 사용
-- 컬럼 코멘트 반드시 작성
 
 #### 컬럼 자료형 규칙
 
