@@ -4,7 +4,15 @@
 
 [Apple's Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)와 [Ray Wenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)를 따르되 다음을 예외로 한다.
 
-- `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다.
+- `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다. (Swift 정식 문법은 아니고 아래 Extension을 추가해야 한다.)
+
+```swift
+extension Bool {
+    func not() -> Bool {
+        return !self
+    }
+}
+```
 
 - `if`, `guard` 문에 콤마(,)를 이용해 조건을 추가할 경우 콤마 뒤에서 다음 줄로 넘어간다.
 
@@ -40,18 +48,32 @@ if let userInfo = notification.userInfo,
 }
 ```
 
-- 싱글톤은 `dispacth_once`를 사용하지 않고 `static let`을 이용한다.
+- `if`, `guard` 문에서 `&&`는 콤마로 대체한다.
+
+```swift
+// Bad
+if book.isGrouped && book.seriesId != nil {
+    ...
+}
+// Good
+if book.isGrouped,
+    book.seriesId != nil {
+        ...
+}
+```
+
+- 싱글톤은 `static let`을 이용한다.
 
 - `NS` 접두가 붙은 클래스의 사용은 최대한 지양한다.
 
 - Swift가 ObjC로 변환되면서 두 언어간 네이밍 규칙이 충돌할 경우 Swift 네이밍 규칙을 우선시 한다.
 
 ```swift
-// Swift
+// Swift에서 권장하는 네이밍
 func removeUserShelf(at index: UInt)
-// Ridibooks-Swift.h
+// 위 메소드가 xcbuild에 의해 ObjC로 변환됐을 때의 네이밍
 - (void)removeUserShelfAt:(NSUInteger)index;
-// Prefferd by ObjC
+// ObjC에서 권장하는 네이밍
 - (void)removeUserShelfAtIndex:(NSUInteger)index;
 ```
 
@@ -75,9 +97,9 @@ NSNumber *modernNumber = @5; // @.5, @1.5, @YES, @(4 + 2)
 
 ## 공통 코딩 스타일
 
-- Tab size는 4로 하고 space를 사용한다.
+- Tab Size는 4로 하고 Space를 사용한다.
 
-- Brace 내 코드가 한 줄이더라도 brace로 반드시 감싸는 것으로 한다.
+- Brace 내 코드가 한 줄이더라도 Brace로 반드시 감싸는 것으로 한다.
 
 ```obj-c
 if (condition) {
@@ -88,9 +110,17 @@ if (condition) {
 - 소스코드 상단에 저작권 및 저자를 표시하는 주석은 남기지 않는다.
 
 
-# 네이밍 규칙
+# 네이밍
 
-## 리소스 네이밍
+## Swift 네이밍
+
+Swift API Design Guidelines의 [Naming](https://swift.org/documentation/api-design-guidelines/#naming) 참고.
+
+## Objective-C 네이밍
+
+[Apple's Cocoa Coding Guidlines](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)의 Naming 항목들 참고.
+
+## 리디 리소스 네이밍
 
 - 소문자만 사용한다.
 - 공백은 언더스코어(_)로 대체한다.
