@@ -29,8 +29,8 @@
 
 ### Platform
 
-- [Android](Android.md) - Kotlin, Java, XML 코딩 스타일
-- [iOS](iOS.md) - [Swift](Swift), Objective-C 코딩 스타일
+- [Android](Android) - Kotlin, Java, XML 코딩 스타일
+- [iOS](iOS) - Swift, Objective-C 코딩 스타일
 - [Qt](Qt.md) - C++, XML 코딩 스타일
 - [CMS 개발 가이드](CMS.md) - 내부 시스템 개발 가이드
 
