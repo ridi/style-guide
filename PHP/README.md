@@ -47,8 +47,8 @@
 - ''과 ""의 사용
   - escape이 적게 사용되는 쪽을 사용
   - 예)
-    - 'I will be back.' 
-    - "I'll be back."
+    - `'I will be back.'`
+    - `"I'll be back."`
   - https://secure.php.net/language.types.string
 - 템플릿 문자열에서 curly brace(`{"$var"}`)의 사용
   - IDE상에서 쉽게 식별이 가능하므로, 필요한 경우에만 괄호로 감쌀 것
