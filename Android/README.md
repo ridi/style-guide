@@ -3,9 +3,7 @@
 
 [EditorConfig 파일](.editorconfig)
 
-[Android Studio Code style 설정 파일](AndroidStudio/CodeStyle.xml)
-
-[Android Studio Inspection profile 설정 파일](AndroidStudio/InspectionProfile.xml)
+[Android Studio 설정](AndroidStudio/README.md)
 
 ## Kotlin 코딩 스타일
 
