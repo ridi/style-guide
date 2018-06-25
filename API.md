@@ -42,7 +42,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 <br>
 
 
-## 신뢰할 수 있는 서버간의 인가(Authorization)
+## 신뢰할 수 있는 서버간의 인가(Inter-Service Authorization)
 
 마이크로서비스를 운영하다보면 내부 서버간, 즉 신뢰할 수 있는 서버간의 API 통신이 필요한 상황이 발생한다.
 이 때 인가는 JWT(JSON Web Tokens)를 통해 이루어져야 하며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
@@ -168,5 +168,6 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 - [OAuth 2.0](https://oauth.net/2/)
 - [JWT](https://jwt.io/)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
+- [A Child’s Garden of Inter-Service Authentication Schemes](https://latacora.singles/2018/06/12/a-childs-garden.html)
 - [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
 - [그런 REST API로 괜찮은가](http://tv.naver.com/v/2292653)
