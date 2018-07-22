@@ -4,15 +4,15 @@
 
 - 웹표준을 철저하게 지킨다.
 - 브라우저는 IE9+, Chrome, Safari, Firefox 지원
-- 마크업시 문서의 흐름을 생각하며 마크업 ( CSS가 없어도 문서로 읽힐 수 있도록 마크업 )
+- 마크업시 문서의 흐름을 생각하며 마크업 (CSS가 없어도 문서로 읽힐 수 있도록 마크업)
 - twig의 html으로 먼저 구조를 잡고난 뒤에 스타일시트를 이용하여 디자인을 맞추는 순서로 퍼블리싱을 진행하도록 한다.
 
 
 ## HTML5
 
 - font, center 등 html5에서 없어진 tag들은 사용하지 않는다.
-- style 과 script tag에  Type을 지정하지 않는다.
-- 페이지에 제목으로 명시될만한 요소가 없는 경우 **class="hidden"** 으로 페이지 타이틀을 명시해준다.
+- style 과 script tag에 Type을 지정하지 않는다.
+- 페이지에 제목으로 명시될만한 요소가 없는 경우 `class="hidden"` 으로 페이지 타이틀을 명시해준다.
 - 기존에 DOM 구조의 depth가 깊어질 경우 사용하고 있는 Text Editor나 Compiler 의 기능을 이용한다. **(태그가 끝나는 부분에 불필요한 주석을 달지 않도록 한다)** 
 - style 을 HTML tag에 inline으로 넣지 않는다.
 - 각종 Path는 ” 로 묶어준다.
@@ -28,8 +28,8 @@
   <hr>
   ```
 - attribute 의 네이밍 에는 언더바( _ ) 가 아닌 하이픈 ( - ) 으로 공백 구분하여 네이밍 한다.
-  -  data-sample_attribute ( x )
-  -  data-sample-attribute ( o )
+  -  data-sample_attribute (X)
+  -  data-sample-attribute (O)
 
 
 ## Twig / Jinja2
@@ -37,10 +37,10 @@
 #### html 부분의 컨벤션은 위의 HTML5  컨벤션을 기본적으로 따르도록 한다.
 
 - 기본적으로 BASE_TEMPLATE 를 extends 하여 사용한다.
-- 스타일시트는 {% block style %} 내부에, 스크립트는 {% block script %} 내부에, html 내용이 들어갈 컨텐츠는 {% block content %} 내부에 선언한다.
-- 기존에는 html 의 주석인 <!-- --> 과 템플릿엔진의 주석인 {# #} 이 혼용되어 사용되고 있었으나, script 영역을 제외하고는 템플릿엔진의 주석을 이용하여 작성한다.
-- 조건적으로 붙게 되는 클래스를 {% if 조건 %}클래스{% endif %} 로 붙이는 경우 공백은 기본적으로 조건문 내부에 넣어서 해당하지 않을경우 불필요한 공백이 끼어들지 않도록 한다.
-  - 예외: 조건 두가지이상 의 경우에 무조건 한가지 이상이 들어가게 되는 경우는 공백을 기본적으로 외부에 넣어주도록 한다.) 
+- 스타일시트는 `{% block style %}` 내부에, 스크립트는 `{% block script %}` 내부에, html 내용이 들어갈 컨텐츠는 `{% block content %}` 내부에 선언한다.
+- 기존에는 html 의 주석인 `<!-- -->` 과 템플릿엔진의 주석인 `{# #}` 이 혼용되어 사용되고 있었으나, script 영역을 제외하고는 템플릿엔진의 주석을 이용하여 작성한다.
+- 조건적으로 붙게 되는 클래스를 `{% if 조건 %}클래스{% endif %}`로 붙이는 경우 공백은 기본적으로 조건문 내부에 넣어서 해당하지 않을경우 불필요한 공백이 끼어들지 않도록 한다.
+  - 예외: 조건 두가지이상 의 경우에 무조건 한가지 이상이 들어가게 되는 경우는 공백을 기본적으로 외부에 넣어주도록 한다.
 
 ### BASE_TEMPLATE 을 extends 하여 사용할 시에 기본적인 구조
 
@@ -88,7 +88,8 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 
 ### 줄바꿈과 들여쓰기
 
-- Indent : space 2칸  //  Continuation Indent : space 4칸
+- Indent : space 2칸
+- Continuation Indent : space 4칸
 - block요소들 그리고 CSS의 display가 block 또는 inline-block 으로 지정된 inline 요소 들은 줄바꿈과 들여쓰기를 한다.
 - header, footer, section, article, nav, aside, div, form, field 등 내용이 그룹화 되는 tag 뒤에는 새로운 빈줄을 추가한다.
 - twig 내의 오브젝트 객체를 set 해주는 경우 아래의 컨벤션을 따른다.
@@ -111,7 +112,7 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 | Tag | Comment |
 | --- | --- |
 | div, span | 절대적으로 최소화 해서 사용.<br>div 와 span을 남용할 경우 소스의 가독성이 떨어진다. |
-| table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다.<br>caption 또한 가능하면 반드시 넣어준다. |
+| table     | thead, tfoot, tbody 구분을 명확히 해야하며 th 와 td 또한 구분해서 사용해야 한다.<br>caption 또한 가능하면 넣어준다. |
 | button, a | 둘을 명확히 구분해서 사용해야 한다. 별다른 동작이 필요없이 link 역할을 할때에는 a 를, JS와의 연동 혹은 submit 역할을 할때에는 button 을 사용한다.<br>button을 사용할 시에 특정 type 이 지정되지 않을 경우에 type="button" 을 항상 명시해준다. |
 | img       | alt 를 반드시 넣어준다. |
 | form요소   | 디자인을 위한 Custom UI 를 구현할 때에도 반드시 form 요소들을 사용해야한다. |
