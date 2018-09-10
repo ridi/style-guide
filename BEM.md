@@ -6,7 +6,7 @@
 
 ### Block
 
-PascelCase를 사용하여 표현합니다.
+PascalCase를 사용하여 표현합니다.
 
 ```html
 <div class="Card">...</div>
@@ -14,7 +14,7 @@ PascelCase를 사용하여 표현합니다.
 
 ### Element
 
-언더스코어(_)와 PascalCase 사용하여 표현합니다.
+언더스코어(_)와 PascalCase를 사용하여 표현합니다.
 
 ```html
 <div class="Card">
