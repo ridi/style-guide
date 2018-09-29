@@ -20,7 +20,7 @@ PascalCase를 사용하여 표현합니다.
 
 ```html
 <div class="Card">
-  <h2 class="Card_Title>...</h2>
+  <h2 class="Card_Title">...</h2>
 </div>
 ```
 
@@ -30,6 +30,6 @@ PascalCase를 사용하여 표현합니다.
 
 ```html
 <div class="Card Card-disabled">
-  <h2 class="Card_Title>...</h2>
+  <h2 class="Card_Title">...</h2>
 </div>
 ```
