@@ -38,7 +38,7 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
   - 예) reader_typo_setting_column_width.xml, simple_noti_icon_error.png
   - 아이콘(icon), 버튼(btn), 배경(bg), 셀렉터(sel)등 리소스의 종류를 상, 하위 개념 다음에 함께 표기한다. 
     상, 하위 개념과 리소스의 종류를 표기 한 뒤 기능과 모양에 어울리는 이름을 자유롭게 추가한다.
-  - 예) reader_tts_ **icon** _pre.png / main_purchased_ **btn** _book_read.png
+  - 예) reader_tts_**icon**\_pre.png / main_purchased_**btn**\_book_read.png
   - 리소스 상위, 하위개념의 영어 명칭은 안드로이드에 현재 개발된 상태를 참고하여 표기한다.
   - 예) 내 서재(library), 개별 책장(shelf), 구매목록(purchased), 서점(store), 설정(settings), 
   - 책장 목록(shelf_list), 최근 읽은 책(recent_book), 독서노트(reading_note), 보기 설정(typo_setting), 뷰어 설정(reader_setting)
