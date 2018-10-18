@@ -103,6 +103,16 @@
 
 
 
+## 프로젝트 디렉토리 구조
+
+신규로 생성되는 프로젝트의 디렉토리는 [PHP The Right Way](https://phptherightway.com/#common_directory_structure)에서 [권장하는 구조](https://github.com/php-pds/skeleton)를 따른다.
+
+- `twig` 템플릿은 `resources` 하위에 위치한다.
+- 서빙을 위한 정적 파일은 `public` 하위에 위치한다.
+- Other Directories에 `cron`, `docker` 등이 포함될 수 있다.
+
+
+
 ## PhpStorm 사용시
 
 - PSR/PSR2 설정 : Preferences > Editor > Code Style > PHP > Set from… > PSR1/PSR2 선택
