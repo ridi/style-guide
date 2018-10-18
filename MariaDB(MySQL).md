@@ -96,6 +96,9 @@
 
 ## DML(Data Manipulation Language) 규칙
 
+#### EXPLAIN 사용해보기
+특히 코드베이스에 SQL의 추가/변경이 필요한 경우 더 중요하다.
+
 #### NATURAL JOIN은 사용하지 않는다.
 컬럼명을 변경하거나 새로운 컬럼을 추가할때 JOIN이 실패하거나 잘못된 결과가 발생할 수 있기 때문에, 항상 명시적으로 INNER JOIN을 사용
 
