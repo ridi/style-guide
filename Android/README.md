@@ -88,4 +88,4 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
 
 ## TextView 설정
 - 2줄이상의 텍스트가 들어갈 경우 `lineSpacingMultiplier`를 `1.15`로 설정한다.
-- `NotoSansCJKkr-Medium` 폰트일경우 `bold` 속성을 적용한다.
+- `디자인 가이드 상에 Medium으로 표현된 폰트일 경우` 폰트일경우 `bold` 속성을 적용한다.
