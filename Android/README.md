@@ -85,3 +85,7 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
     CheckBox syncButton = (CheckBox) findViewById(R.id.sync_button);
     RadioButton koreanDicButton = (RadioButton) findViewById(R.id.korean_dic_button);
     ```
+
+## TextView 설정
+- 디자인 가이드 상에 Medium으로 표현된 폰트일 경우 `bold` 속성을 적용한다.
+- 텍스트와 관련된 기타 설정은 [RIDI Design System](https://ridi.github.io/design-system/app/typography/) 을 따른다.
