@@ -85,3 +85,7 @@ Kotlin 공식 문서의 [Coding Convention](http://kotlinlang.org/docs/reference
     CheckBox syncButton = (CheckBox) findViewById(R.id.sync_button);
     RadioButton koreanDicButton = (RadioButton) findViewById(R.id.korean_dic_button);
     ```
+
+## TextView 설정
+- 2줄이상의 텍스트가 들어갈 경우 `lineSpacingMultiplier`를 `1.15`로 설정한다.
+- `NotoSansCJKkr-Medium` 폰트일경우 `bold` 속성을 적용한다.
