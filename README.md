@@ -19,9 +19,9 @@
 ### Communication
 
 - [코드 리뷰 원칙](Review.md)
+- [코드를 공개하기](OSS.md)
 - [슬랙 사용 규칙](Slack.md)
 - [HTTP API 작성 가이드](API.md)
-- [UI 텍스트 작성 가이드](https://github.com/ridi/design-system/blob/master/_pages/writings/index.md)
 
 
 ### Language
