@@ -7,7 +7,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - 서드파티 혹은 임의의 개인이 사용 가능
    - FQDN: `api.ridibooks.com`
      - 도메인은 API Gateway에 연결되어 있으며, 변경 필요시 [@ridi/performance](https://github.com/orgs/ridi/teams/performance) 팀에 요청
-   - 보안 프로토콜(TLS/SSL)을 사용해야 함
+   - 보안 프로토콜(TLS)을 사용해야 함
    - 인증에는 OAuth 2.0을 사용
      - [인증 서버 구현체](https://github.com/ridi/account) 및 [Python](https://github.com/ridi/django-oauth2), [PHP](https://github.com/ridi/php-oauth2) 미들웨어 참고
 
@@ -17,7 +17,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - FQDN:
      - 공인 IP가 있다면 `{team}-api.ridibooks.com`
      - 공인 IP가 없다면 `api.{team}.ridi.io`
-   - 공인 IP를 가질 경우 보안 프로토콜(TLS/SSL)을 사용해야 함
+   - 공인 IP를 가질 경우 보안 프로토콜(TLS)을 사용해야 함
    - 클라이언트 라이브러리가 필요한 경우 **사용하는 팀에서** 직접 작성
 
 3. Private API
@@ -102,6 +102,20 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
   "scope": "all"
 }
 ```
+
+
+<br>
+
+## 테스트 환경을 공유하기
+
+MSA 기반의 서비스들은 개발에 필요한 테스트 환경이 원활하게 제공할 수 있어야 하며 아래 규칙을 준수해야 한다.
+
+- 쿠키 공유를 위해 상위 도메인은 `.ridi.io`로 설정해야 한다.
+- **공인인증서로** 암호화된 HTTPS 프로토콜을 지원해야 한다.
+- 예기치 않은 정보 유출을 방지하기 위해 외부 접근은 차단해야 한다.
+  - 크롤링을 차단하는 robots.txt 파일도 반드시 추가할 것
+
+테스트 환경은 무중단으로 운영되지 않을 수 있으므로 사전에 이용을 협의하는 것을 원칙으로 한다.
 
 
 <br>
