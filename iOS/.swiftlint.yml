@@ -6,8 +6,6 @@ excluded:
   - Pods
 
 disabled_rules:
-  - block_based_kvo # Prefer the new block based KVO API with keypaths when using Swift 3.2 or later.
-  - cyclomatic_complexity # Complexity of function bodies should be limited.
   - file_length # Files should not span too many lines.
   - for_where # where clauses are preferred over a single if inside a for.
   - force_cast # Force casts should be avoided.
