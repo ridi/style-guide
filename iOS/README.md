@@ -4,15 +4,17 @@
 
 [Apple's Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)와 [Ray Wenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)를 따르되 다음을 예외로 한다.
 
-- `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다. (Swift 정식 문법은 아니고 아래 Extension을 추가해야 한다.)
-
-```swift
-extension Bool {
-    func not() -> Bool {
-        return !self
+- 수식 내에서 `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다.
+  - Swift 정식 문법은 아니고 아래 Extension을 추가해야 한다.
+    ```swift
+    extension Bool {
+        func not() -> Bool {
+            return !self
+        }
     }
-}
-```
+    ```
+
+- 단순히 `Boolean` 값을 변경할 때는 [toggle()](https://developer.apple.com/documentation/swift/bool/2994863-toggle)을 사용한다.
 
 - `if`, `guard` 문에 콤마(,)를 이용해 조건을 추가할 경우 콤마 뒤에서 다음 줄로 넘어간다.
 
@@ -64,7 +66,7 @@ if book.isGrouped,
 
 - 싱글톤은 `static let`을 이용한다.
 
-- `NS` 접두가 붙은 클래스의 사용은 최대한 지양한다.
+- `NS` 접두가 붙은 클래스의 사용은 **최대한 지양**한다.
 
 - Swift가 ObjC로 변환되면서 두 언어간 네이밍 규칙이 충돌할 경우 Swift 네이밍 규칙을 우선시 한다.
 
