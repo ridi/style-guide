@@ -1,0 +1,27 @@
+--exclude Ridibooks/Pods,Ridibooks/Frameworks,**/*.generated.swift
+--disable consecutiveSpaces,indent,isEmpty,redundantParens,strongOutlets,trailingClosures
+
+--allman false
+--binarygrouping ignore
+--closingparen balanced
+--commas false
+--comments indent
+--decimalgrouping ignore
+--elseposition same-line
+--header ignore
+--hexgrouping ignore
+--hexliteralcase lowercase
+--ifdef indent
+--importgrouping alphabetized
+--indent 4
+--indentcase false
+--linebreaks lf
+--octalgrouping ignore
+--operatorfunc spaced
+--patternlet hoist
+--ranges no-space
+--semicolons never
+--stripunusedargs closure-only
+--trimwhitespace nonblank-lines
+--wraparguments before-first
+--wrapcollections before-first
