@@ -23,11 +23,6 @@
 if results.isEmpty.not(), let delegate = seriesDelegate(byId: seriesId) {
     books.append(delegate)
 }
-// Bad
-if results.isEmpty.not(),
-    let delegate = seriesDelegate(byId: seriesId) {
-    books.append(delegate)
-}
 // Good
 if results.isEmpty.not(),
     let delegate = seriesDelegate(byId: seriesId) {
