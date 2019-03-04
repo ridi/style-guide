@@ -4,7 +4,7 @@
 
 [Apple's Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)와 [Ray Wenderlich Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)를 따르되 다음을 예외로 한다.
 
-- 수식 내에서 `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다.
+- 표현식 내에서 `Boolean`을 부정할 때는 `!` 대신 `not()`을 사용한다.
   - Swift 정식 문법은 아니고 아래 Extension을 추가해야 한다.
     ```swift
     extension Bool {
