@@ -1,29 +1,87 @@
-# Note 1: 가독성 개선 및 코드 간략화를 위함
-# Note 2: Xcode 에디터 특성상 의미 없음
-# Note 3: VC 구조상 지킬 수 없음
-# Note 4: API 관련 Data class와 JSI 설계를 위함
-# Note 5: 속도 향상을 위함
+# refs: https://github.com/realm/SwiftLint/blob/master/Rules.md
 
-disabled_rules:
-  - file_length # 파일 길이 제한 없음 (Note 3)
-  - for_where # for-in-where 강제 안함 (Note 1)
-  - force_cast # 강제 cast 허용 (Note 1)
-  - force_try # 강제 try 허용 (Note 1)
-  - function_body_length # 함수 구현부 길이 제한 없음 (Note 1)
-  - function_parameter_count # 함수 파라메터 갯수 제한 없음 (Note 4)
-  - line_length # 행 길이 제한 없음 (Note 2)
-  - todo
-  - trailing_whitespace # 구문 줄 바꿈 허용 (Note 1)
-  - type_body_length # 타입 선언부 길이 제한 없음 (Note 3)
-  - variable_name # 변수명 길이 제한 없음 (Note 4)
-  - vertical_whitespace # 수직 여백 허용 (Note 1)
-
-opt_in_rules:
-  - closure_end_indentation # 클로저의 시작과 끝의 들여쓰기를 동일하게 맞추도록 (Note 1)
-  - closure_spacing # 클로저 표현식의 시작과 끝에 공백을 넣도록 (Note 1)
-  - empty_count # isEmpty 사용 강제 (Note 1, 5)
-  - explicit_init # 명시적인 init 호출을 하지 않도록 (Note 1)
-  - first_where # `.filter { … }.first` 보다 `.first(where: { … })`를 사용하도록 (Note 1, 5)
+reporter: "xcode"
 
 excluded:
   - Pods
+
+disabled_rules:
+  - file_length # Files should not span too many lines.
+  - for_where # where clauses are preferred over a single if inside a for.
+  - force_cast # Force casts should be avoided.
+  - force_try # Force tries should be avoided.
+  - function_body_length # Functions bodies should not span too many lines.
+  - todo # TODOs and FIXMEs should be resolved.
+  - trailing_whitespace # Lines should not have trailing whitespace.
+  - unused_setter_value # Setter value is not used.
+
+opt_in_rules:
+  - anyobject_protocol # Prefer using AnyObject over class for class-only protocols.
+  - array_init # Prefer using Array(seq) over seq.map { $0 } to convert a sequence into an Array.
+  - closure_end_indentation # Closure end should have the same indentation as the line that started it.
+  - closure_spacing # Closure expressions should have a single space inside each brace.
+  - collection_alignment # All elements in a collection literal should be vertically aligned
+  - conditional_returns_on_newline # Conditional statements should always return on the next line.
+  - discouraged_object_literal # Prefer initializers over object literals.
+  - empty_count # Prefer checking isEmpty over comparing count to zero.
+  - empty_string # Prefer checking isEmpty over comparing string to an empty string literal.
+  - empty_xctest_method # Empty XCTest method should be avoided.
+  - explicit_init # Explicitly calling .init() should be avoided.
+  - extension_access_modifier # Prefer to use extension access modifiers.
+  - fallthrough # Fallthrough should be avoided.
+  - fatal_error_message # A fatalError call should have a message.
+  - file_header # Header comments should be consistent with project patterns.
+  - first_where # Prefer using .first(where:) over .filter { }.first in collections.
+  - function_default_parameter_at_end # Prefer to locate parameters with defaults toward the end of the parameter list.
+  - joined_default_parameter # Discouraged explicit usage of the default. separator.
+  - last_where # Prefer using .last(where:) over .filter { }.last in collections.
+  - legacy_random # Prefer using type.random(in:) over legacy functions.
+  - literal_expression_end_indentation # Array and dictionary literal end should have the same indentation as the line that started it.
+  - lower_acl_than_parent # Ensure definitions have a lower access control level than their enclosing parent.
+  - multiline_literal_brackets # Multiline literals should have their surrounding brackets in a new line.
+  - prohibited_super_call # Some methods should not call super.
+  - sorted_imports # Imports should be sorted.
+  - toggle_bool # Prefer someBool.toggle() over someBool = !someBool.
+  - unneeded_parentheses_in_closure_argument # Parentheses are not needed when declaring closure arguments.
+  - unused_import # All imported modules should be required to make the file compile.
+  - unused_private_declaration # Private declarations should be referenced in that file.
+  - vertical_parameter_alignment_on_call # Function parameters should be aligned vertically if they're in multiple lines in a method call.
+
+custom_rules:
+  trailing_logical_operator:
+    name: 'Trailing logical operator'
+    message: 'Leading logical operator should move to trailing.'
+    regex: '^[\s]*(\|\||&&)'
+  no_exclamation_not_operator:
+    name: 'No exclamation not operator'
+    message: 'Force use .not() method instead of an exclamation mark prefix operator(!) for logical not.'
+    regex: '(!(?:(?!DEBUG))\w+)'
+
+# Identifier names should only contain alphanumeric characters and start with a lowercase character or should only contain capital letters.
+# In an exception to the above, variable names may start with a capital letter when they are declared static and immutable. Variable names should not be too long or too short.
+identifier_name:
+  allowed_symbols: ['_']
+  max_length:
+    warning: 50
+    error: 50
+  min_length:
+    warning: 1
+    error: 1
+  validates_start_with_lowercase: false
+
+# Types should be nested at most 2 level deep, and statements should be nested at most 5 levels deep.
+nesting:
+  type_level:
+    warning: 2
+    error: 2
+
+# Type name should only contain alphanumeric characters, start with an uppercase character and span between 3 and 50 characters in length.
+type_name:
+  allowed_symbols: ['_']
+  max_length:
+    warning: 50
+    error: 50
+
+# Limit vertical whitespace to a single empty line.
+vertical_whitespace:
+  max_empty_lines: 2
