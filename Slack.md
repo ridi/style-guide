@@ -32,6 +32,8 @@
 
 - 긴급 알림을 위한 채널을 제외하면 모두 Mute가 가능합니다.
 - 단, Mute된 채널이라도 업무시간이 종료되기 전에는 반드시 확인 후 답변해야 합니다.
+- Mute가 불가능하다는 것은 동기적인 대응이 필요하다는 것을 의미합니다.
+  - 예) &#35;119, &#35;announcement
 
 #### 슬랙의 상태 설정을 권장합니다.
 
@@ -40,7 +42,6 @@
   - ☕️ 카페코딩 중
   - 🏡 원격근무 중
   - 🌴 휴가 중 (m월 d일 복귀)
-
 
 <br>
 
@@ -52,9 +53,8 @@
 
 |          접두어 | 용도                                  | 예                                        | 🔕    |
 | -----------: | ----------------------------------- | ---------------------------------------- | ----- |
-| announcement | 전체 주요 공지사항                          | &#35;announcement                        | NO    |
+|   {hotline}- | 특정 주제에 대한 빠른 소통을 위한 채널<br>(업무와 관련된) | &#35;hotline-library<br>&#35;hotline-cms | NO    |
 |      {team}- | 팀 내에서만 사용되는 채널                      | &#35;store-food<br>&#35;platform-devops  |       |
-|   {hotline}- | 특정 주제에 대한 빠른 소통을 위한 채널<br>(업무와 관련된) | &#35;hotline-library<br>&#35;hotline-cms |       |
 |       guild- | 특정 관심사를 공유하는 길드 채널<br>(업무와 관련된)     | &#35;guild-frontend<br>&#35;guild-docker |       |
 |      lounge- | 특정 관심사를 공유하는 길드 채널<br>(업무와 관련되지 않은) | &#35;lounge-overwatch<br>&#35;lounge-jujunburi |       |
 |      sentry- | 특정 Sentry 수신 채널                     | &#35;sentry-staging<br>&#35;sentry-store | NO    |
