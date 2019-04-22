@@ -80,7 +80,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 이 때 access token은 JWT(JSON Web Tokens) 형태로 발급되며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
 
 - RS256(RSA Signature with SHA-256) 알고리즘으로 서명
-  - Private키는 OAuth2 서버가 소유, Public키는 리소스 서버가 공유
+  - 토큰 서명 생성용 비공개키는 OAuth2 서버가 소유, 토큰 서명 확인용 공개키는 리소스 서버에 공유
 - 아래의 claim들이 payload에 제공되어야 함
   - sub: 리소스 소유자의 리디북스 ID
   - u_idx: 리소스 소유자의 고유 식별자(user_idx)
