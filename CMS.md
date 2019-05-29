@@ -35,9 +35,11 @@
 - Radio, Checkbox 등은 Label 태그로 감싸서 텍스트를 클릭해도 선택이 되도록
 
 ```html
+{% raw %}
 <label class="checkbox-inline">
   <input type="checkbox" name="notice_filter_types[]" value="{{ type }}"
          {% if type not in notice.hidden_filter_publisher_type %}checked="checked"{% endif %}> {{ type }}
+{% endraw %}
 </label>
 ```
 

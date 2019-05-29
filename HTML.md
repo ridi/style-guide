@@ -36,16 +36,19 @@
 
 #### html 부분의 컨벤션은 위의 HTML5  컨벤션을 기본적으로 따르도록 한다.
 
+{% raw %}
 - 기본적으로 BASE_TEMPLATE 를 extends 하여 사용한다.
 - 스타일시트는 `{% block style %}` 내부에, 스크립트는 `{% block script %}` 내부에, html 내용이 들어갈 컨텐츠는 `{% block content %}` 내부에 선언한다.
 - 기존에는 html 의 주석인 `<!-- -->` 과 템플릿엔진의 주석인 `{# #}` 이 혼용되어 사용되고 있었으나, script 영역을 제외하고는 템플릿엔진의 주석을 이용하여 작성한다.
 - 조건적으로 붙게 되는 클래스를 `{% if 조건 %}클래스{% endif %}`로 붙이는 경우 공백은 기본적으로 조건문 내부에 넣어서 해당하지 않을경우 불필요한 공백이 끼어들지 않도록 한다.
   - 예외: 조건 두가지이상 의 경우에 무조건 한가지 이상이 들어가게 되는 경우는 공백을 기본적으로 외부에 넣어주도록 한다.
+{% endraw %}
 
 ### BASE_TEMPLATE 을 extends 하여 사용할 시에 기본적인 구조
 
+{% raw %}
 meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅에서 해당 블럭을 상속받으려는 경우
-{{ parent() }} 를 선언 해준다.
+`{{ parent() }}` 를 선언 해준다.
 
 ```twig
 {% block meta %}
@@ -72,10 +75,12 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
  // body 내부에서 가장 최하단에 들어갈 스크립트 영역 ( 리액트 등에서 사용 )
 {% endblock bottomscript %}
 ```
+{% endraw %}
 
 ### if 를 사용할때 조건이 길어져서 줄바꿈을 하는 경우에는 or, and 등의 비교 연산자를 줄의 가장 앞에 오도록 선언한다.
 
 예시) 
+{% raw %}
 ```twig
 {% if example_a == 1
       or example_b == 2
@@ -84,6 +89,7 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 
 {% endif %}
 ```
+{% endraw %}
 
 
 ### 줄바꿈과 들여쓰기
@@ -94,6 +100,7 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
 - header, footer, section, article, nav, aside, div, form, field 등 내용이 그룹화 되는 tag 뒤에는 새로운 빈줄을 추가한다.
 - twig 내의 오브젝트 객체를 set 해주는 경우 아래의 컨벤션을 따른다.
 
+  {% raw %}
   ```twig
   {# 프로퍼티가 여러개일 경우 #}
   {% set options = {
@@ -105,6 +112,7 @@ meta, style, script 블럭을 선언 하여 사용할시에 기본 base 트윅�
   {# 단일 프로퍼티일 경우 #}
   {% set options = {'key_name': key_value} %}
   ```
+  {% endraw %}
 
 
 ## Tag 주의사항
