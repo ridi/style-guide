@@ -10,6 +10,9 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
    - 보안 프로토콜(TLS)을 사용해야 함
    - 인증에는 OAuth 2.0을 사용
      - [인증 서버 구현체](https://github.com/ridi/account) 및 [Python](https://github.com/ridi/django-oauth2), [PHP](https://github.com/ridi/php-oauth2) 미들웨어 참고
+   - 첫 번째 Path Segment는 서비스명으로 시작한다.
+     - 예) 검색 서비스: ```api.ridibooks.com/search/```
+     - 예) 책 상세 서비스: ```api.ridibooks.com/books/```
 
 2. Protected API
 
@@ -120,10 +123,6 @@ MSA 기반의 서비스들은 개발에 필요한 테스트 환경이 원활하�
 <br>
 
 ## HTTP API 작성 가이드
-
-- 첫 번째 Path Segment는 서비스명으로 시작한다.
-  - 예) 검색 서비스: ```api.ridibooks.com/search/```
-  - 예) 책 상세 서비스: ```api.ridibooks.com/books/```
  
 - Path Segments를 표현할 때에는 [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles) 를 사용할 것
   - 예) ```/reading-notes/{b_id}```
