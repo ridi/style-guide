@@ -54,7 +54,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
   - 서비스명은 사전에 약속된 문자열을 사용
   - 서비스명은 kebab-case로 표기
   - sub(주제)는 필요에 따라 선택적으로 사용
-- RS256(RSA Signature SHA-256) 알고리즘으로 서명
+- RS256(RSA Signature with SHA-256) 알고리즘으로 서명
   - iss에 따라 구분되는 비대칭키를 사용
   - 토큰의 서명에는 **iss의 비밀키**를, 토큰의 검증에는 사전에 aud측으로 전달된 iss의 공개키를 사용
 - exp(만료시간)를 반드시 포함
@@ -104,6 +104,49 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
   "scope": "all"
 }
 ```
+
+
+<br>
+
+## JWT 서명
+
+RSA 기반으로 JWT를 서명하는 경우 JSON Web Key Set (JWKS) 형식으로 공개키 집합을 전달한다. 
+JWKS는 키 로테이션을 위한 표준화된 수단을 제공하므로, 기존에 사용하고 있던 PEM 형식의 파일 전달 방식을 대체한다.
+
+1. JWK 객체는 아래의 조건을 만족해야 한다.
+
+   - kid(Key ID)는 반드시 작성
+   - alg(Algorithm)는 반드시 `"RS256"`
+   - kty(Key Type)은 반드시 `"RSA"`
+   - use(Public Key Use)는 반드시 `"sig"`
+
+   예)
+
+   ```json
+   {
+     "keys": [{
+       "kid": "1234example=",
+       "alg": "RS256",
+       "kty": "RSA",
+       "e": "AQAB",
+       "n": "1234567890",
+       "use": "sig"
+     }, {
+       "kid": "5678example=",
+       "alg": "RS256",
+       "kty": "RSA",
+       "e": "AQAB",
+       "n": "987654321",
+       "use": "sig"
+     }]
+   }
+   ```
+
+2. 서명하는 측은 키 정보를 담은 JSON 파일을 서버에 업로드하고 해당 URL을 통해 공유한다.
+   - 예: `https://api.dev.ridi.io/jwks/store.json`
+
+3. 인증하는 측의 키 로테이션 지원 여부는 선택사항이다.
+   - 따라서 서명하는 측은 `kid` 사용 가능 여부를 사전에 확인해야 한다.
 
 
 <br>
@@ -180,9 +223,8 @@ MSA 기반의 서비스들은 개발에 필요한 테스트 환경이 원활하�
 
 ### 참고
 
-- [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
 - [OAuth 2.0](https://oauth.net/2/)
-- [JWT](https://jwt.io/)
+- [JSON Web Token (JWT)](https://jwt.io/), [JSON Web Key (JWK)](https://tools.ietf.org/html/rfc7517)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
 - [A Child’s Garden of Inter-Service Authentication Schemes](https://latacora.singles/2018/06/12/a-childs-garden.html)
 - [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
