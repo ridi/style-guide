@@ -224,7 +224,8 @@ MSA 기반의 서비스들은 개발에 필요한 테스트 환경이 원활하�
 ### 참고
 
 - [OAuth 2.0](https://oauth.net/2/)
-- [JSON Web Token (JWT)](https://jwt.io/), [JSON Web Key (JWK)](https://tools.ietf.org/html/rfc7517)
+- [JSON Web Token (JWT)](https://jwt.io/)
+- [JSON Web Key Set](https://auth0.com/docs/jwks)
 - [Choosing an HTTP Status Code — Stop Making It Hard](http://racksburg.com/choosing-an-http-status-code/)
 - [A Child’s Garden of Inter-Service Authentication Schemes](https://latacora.singles/2018/06/12/a-childs-garden.html)
 - [API Error Handling](http://nordicapis.com/best-practices-api-error-handling/)
