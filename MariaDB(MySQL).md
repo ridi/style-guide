@@ -1,5 +1,10 @@
 # MariaDB(MySQL) 사용 규칙
 
+AWS RDS에서 MariaDB 슬레이브를 구축할 경우 10.1 버전 권장[\*]
+
+[\*]: https://mydbops.wordpress.com/2018/01/18/replication-will-not-start-on-rds-mariadb-10-2/
+
+
 ## DDL(Data Definition Language) 규칙
 
 ### 테이블 규칙
