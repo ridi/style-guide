@@ -4,6 +4,7 @@ reporter: "xcode"
 
 excluded:
   - Pods
+  - Carthage
 
 disabled_rules:
   - file_length # Files should not span too many lines.
@@ -22,6 +23,7 @@ opt_in_rules:
   - closure_spacing # Closure expressions should have a single space inside each brace.
   - collection_alignment # All elements in a collection literal should be vertically aligned
   - conditional_returns_on_newline # Conditional statements should always return on the next line.
+  - contains_over_first_not_nil # Prefer contains over first(where:) != nil and firstIndex(where:) != nil.
   - discouraged_object_literal # Prefer initializers over object literals.
   - empty_count # Prefer checking isEmpty over comparing count to zero.
   - empty_string # Prefer checking isEmpty over comparing string to an empty string literal.
@@ -34,6 +36,7 @@ opt_in_rules:
   - first_where # Prefer using .first(where:) over .filter { }.first in collections.
   - function_default_parameter_at_end # Prefer to locate parameters with defaults toward the end of the parameter list.
   - joined_default_parameter # Discouraged explicit usage of the default. separator.
+  - legacy_multiple # Prefer using the isMultiple(of:) function instead of using the remainder operator (%).
   - last_where # Prefer using .last(where:) over .filter { }.last in collections.
   - legacy_random # Prefer using type.random(in:) over legacy functions.
   - literal_expression_end_indentation # Array and dictionary literal end should have the same indentation as the line that started it.
@@ -43,6 +46,7 @@ opt_in_rules:
   - sorted_imports # Imports should be sorted.
   - toggle_bool # Prefer someBool.toggle() over someBool = !someBool.
   - unneeded_parentheses_in_closure_argument # Parentheses are not needed when declaring closure arguments.
+  - unowned_variable_capture # Prefer capturing references as weak to avoid potential crashes.
   - unused_import # All imported modules should be required to make the file compile.
   - unused_private_declaration # Private declarations should be referenced in that file.
   - vertical_parameter_alignment_on_call # Function parameters should be aligned vertically if they're in multiple lines in a method call.

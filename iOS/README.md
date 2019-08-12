@@ -78,7 +78,7 @@ func removeUserShelf(at index: UInt)
 
 [Apple's Cocoa Coding Guidlines](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)와 [Google Objective-C Style Guide](https://google.github.io/styleguide/objcguide.xml)를 따르되 다음을 예외로 한다.
 
-- 매크로 상수 앞에 `k`를 붙이지 않고 대문자와 언더스코어(_)로 이루어진 이름을 사용한다.
+- 매크로 상수 앞에 `k`를 붙이지 않고 대문자와 언더스코어(`_`)로 이루어진 이름을 사용한다.
 
 - Modern Objective-C Syntax를 사용한다. (**주의 : nil이 있으면 error**)
 ```obj-c
@@ -120,14 +120,14 @@ Swift API Design Guidelines의 [Naming](https://swift.org/documentation/api-desi
 ## 리디 리소스 네이밍
 
 - 소문자만 사용한다.
-- 공백은 언더스코어(_)로 대체한다.
+- 공백은 언더스코어(`_`)로 대체한다.
 - 접두어에는 폴더명, 컴포넌트명, 디자인 고유명이 있다.
 - 각 접두어는 언더스코어로 구분된다.
 - 여러 접두어를 사용할 경우 '폴더명', '컴포넌트명', '디자인 고유명' 순으로 사용한다.
 - 폴더명은 리소스가 속하는 뷰나 기능을 의미한다.
-    - share : 멋지게 공유하기 리소스
-    - welcome : 월컴뷰 리소스
-    - reader : 뷰어 리소스
+    - share: 멋지게 공유하기 리소스
+    - welcome: 월컴뷰 리소스
+    - reader: 뷰어 리소스
 - 폴더명은 상위 폴더명까지 포함한다.
     - X) resources/reader/typo/*.png -> typo_xxx.png
     - O) resources/reader/typo/*.png -> reader_typo_xxx.png
@@ -153,16 +153,16 @@ Swift API Design Guidelines의 [Naming](https://swift.org/documentation/api-desi
     - logo
     - bg
 - 접미어에는 색상이나 크기, 위치, 순번, 테마, 상태가 있다.
-    - 색상 : reader_color_***black***.png
-    - 크기 : welcome_logo_***large***.png
-    - 위치 : selection_arrow_***left***.png
-    - 순번 : customfont_tutorial_***1***.png
-    - 테마 : icon_pagination_left_***d***.png
-    - 상태 : icon_freebook_***on***.png
+    - 색상: reader_color_**black**.png
+    - 크기: welcome_logo_**large**.png
+    - 위치: selection_arrow_**left**.png
+    - 순번: customfont_tutorial_**1**.png
+    - 테마: icon_pagination_left_**d**.png
+    - 상태: icon_freebook_**on**.png
 - 접미어는 중첩할 수 있으며 순서는 재량이다.
 - 테마 접미어에는 'd'와 생략이 있다.
-    - d : 다크 테마
-    - 생략 : 화이트 테마
+    - d: 다크 테마
+    - 생략: 화이트 테마
 - 상태 접미어에는 되도록 다음 항목만 사용한다.
     - normal
     - highlighted
@@ -200,14 +200,14 @@ Swift API Design Guidelines의 [Naming](https://swift.org/documentation/api-desi
 
 - 접미어에 orientaion, screenHeight, rate, interfaceIdiom이 있다.
 - 각 접미어는 상황에 맞춰 선택적으로 쓰이며 쓸 때는 알맞는 접두어를 사용해야 한다.
-    - **-**[orientaion]
-    - **-**[screenHeight]
-    - **@**[rate]
-    - **~**[interfaceIdiom]
+    - **-**\[orientaion\]
+    - **-**\[screenHeight\]
+    - **@**\[rate\]
+    - **~**\[interfaceIdiom\]
 - 접미어는 위에서 언급한 순서대로 사용되어야 한다.
-    - X) name-[rate]-[orientaion]
-    - X) name-[interfaceIdiom]-[rate]
-    - O) name-[screenHeight]-[rate]
+    - X) name-\[rate\]-\[orientaion\]
+    - X) name-\[interfaceIdiom\]-\[rate\]
+    - O) name-\[screenHeight]-\[rate\]
 - orientaion은 특정 회전 상태에만 쓰일 수 있도록 하는 접미어다.
     - name-**P**ortrait.png // 세로 모드에서만 사용
     - name-**L**andscape.png // 가로 모드에서만 사용
@@ -218,16 +218,16 @@ Swift API Design Guidelines의 [Naming](https://swift.org/documentation/api-desi
     - name-736h.png // 5.5인치에서만 사용
     - name.png // 생략했을 때는 모든 크기에서 사용함을 의미
 - rate는 특정 화면 배율에서 쓰일 수 있도록 하는 접미어다.
-    - name@3x.png // 3x에서 사용
-    - name@2x.png // 2x에서 사용
+    - name<span>@</span>3x.png // 3x에서 사용
+    - name<span>@</span>2x.png // 2x에서 사용
     - name.png // 생략했을 때는 1x에서 사용함을 의미
 - interfaceIdiom은 특정 디바이스(iPhone/iPod, iPad)에서만 쓰일 수 있도록 하는 접미어다.
     - name~ipad.png // iPad에서만 사용
     - name~iphone.png // iPhone/iPod에서만 사용
     - name.png // 생략했을 때는 모든 디버이스에서 사용함을 의미
 - 예시들
-    - reader_paper_bg@2x.png
-    - memo_bg_2-Landscape@2x.png
-    - memo_bg_2-Landscape-667h@2x.png
+    - reader_paper_bg<span>@</span>2x.png
+    - memo_bg_2-Landscape<span>@</span>2x.png
+    - memo_bg_2-Landscape-667h<span>@</span>2x.png
     - shelf_new_tag~ipad.png
 

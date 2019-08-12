@@ -1,4 +1,4 @@
---exclude Pods,**/*.generated.swift
+--exclude Pods,Carthage,**/*.generated.swift
 --disable consecutiveSpaces,indent,isEmpty,redundantParens,strongOutlets,trailingClosures
 
 --allman false
