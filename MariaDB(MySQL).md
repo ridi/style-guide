@@ -69,8 +69,9 @@ AWS RDS에서 MariaDB 슬레이브를 구축할 경우 10.1 버전 권장[\*]
   - Collation이 case-sensitive인 경우에 코드의 실수를 방지할 수 있음
   - enum을 정의하지 않아도 되며, 플래그로 변경이 용이
 
-- IPv4를 저장할 때에는 `UNSIGNED INT` 타입을 이용
-  - `VARCHAR(16)`에 비해 1/4의 저장공간만 사용
+- IP를 저장할 때에는 IPv6를 고려한 컬럼 타입을 지정
+  - `UNSIGNED INT`, `VARCHAR(15)` 사용 금지
+  - `VARBINARY(16)`, `VARCHAR(39)` 사용
 
 - 유효기간 등을 표현할 때 이 값이 optional 한 경우 유효기간이 없음은 null로 표현
 
