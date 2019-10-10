@@ -82,7 +82,8 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 마이크로서비스 환경에서 최종사용자의 SSO(Single Sign-On)를 지원하기 위해 OAuth2를 사용한다.
 이 때 access token은 JWT(JSON Web Tokens) 형태로 발급되며, 사용되는 토큰은 아래의 조건을 만족해야 한다.
 
-- RS256(RSA Signature with SHA-256) 알고리즘으로 서명
+- ES256(ECDSA using P-256 curve and SHA-256) 혹은 RS256(RSA Signature with SHA-256) 으로 서명
+  - 리소스 서버들은 RS256 및 ES256 알고리즘을 지원해야 한다.
 - 아래의 claim들이 payload에 제공되어야 함
   - sub: 리소스 소유자의 리디북스 ID
   - u_idx: 리소스 소유자의 고유 식별자(user_idx)
@@ -94,7 +95,7 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 ```
 { // header
   "typ": "JWT",
-  "alg": "RS256"
+  "alg": "ES256"
 }
 { // payload
   "sub": "antiline",
