@@ -112,14 +112,15 @@ API는 공개 수준에 따라 아래의 3가지로 구분하며, 가능한 높�
 
 ## JWT 서명
 
-RSA 기반으로 JWT를 서명하는 경우 JSON Web Key Set (JWKS) 형식으로 공개키 집합을 전달한다. 
+RSA 혹은 ECDSA 기반으로 JWT를 서명하는 경우 JSON Web Key Set (JWKS) 형식으로 공개키 집합을 전달한다. 
 JWKS는 키 로테이션을 위한 표준화된 수단을 제공하므로, 기존에 사용하고 있던 PEM 형식의 파일 전달 방식을 대체한다.
 
 1. JWK 객체는 아래의 조건을 만족해야 한다.
 
    - kid(Key ID)는 반드시 작성
-   - alg(Algorithm)는 반드시 `"RS256"`
-   - kty(Key Type)은 반드시 `"RSA"`
+   - kty(Key Type)은 반드시 `"RSA"` 혹은 `"EC"`
+       - kty가 `"RSA"`인 경우 alg(Algorithm)는 반드시 `"RS256"`
+       - kty가 `"EC"`인 경우 crv(Curve)는 반드시 `"P-256"`
    - use(Public Key Use)는 반드시 `"sig"`
 
    예)
@@ -127,19 +128,19 @@ JWKS는 키 로테이션을 위한 표준화된 수단을 제공하므로, 기�
    ```json
    {
      "keys": [{
-       "kid": "1234example=",
-       "alg": "RS256",
-       "kty": "RSA",
-       "e": "AQAB",
-       "n": "1234567890",
-       "use": "sig"
+       "kid":"1234example=",
+       "kty":"EC",
+       "crv":"P-256",
+       "use":"sig",
+       "x":"MKBCTNIcKUSDii11ySs3526iDZ8AiTo7Tu6KPAqv7D4",
+       "y":"4Etl6SRW2YiLUrN5vfvVHuhp7x8PxltmWWlbbM4IFyM"
      }, {
        "kid": "5678example=",
-       "alg": "RS256",
        "kty": "RSA",
+       "alg": "RS256",
+       "use": "sig",
        "e": "AQAB",
-       "n": "987654321",
-       "use": "sig"
+       "n": "987654321"
      }]
    }
    ```
