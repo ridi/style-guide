@@ -18,19 +18,19 @@
 
 ### Communication
 
-- [코드 리뷰 원칙](Review)
-- [코드를 공개하기](OSS)
-- [슬랙 사용 규칙](Slack)
-- [HTTP API 작성 가이드](API)
+- [코드 리뷰 원칙](Review.md)
+- [코드를 공개하기](OSS.md)
+- [슬랙 사용 규칙](Slack.md)
+- [HTTP API 작성 가이드](API.md)
 
 
 ### Language
 
-- [HTML](HTML) - HTML, Twig/Jinja2 코딩 스타일
+- [HTML](HTML.md) - HTML, Twig/Jinja2 코딩 스타일
 - [JavaScript](JavaScript) / [TypeScript](https://github.com/ridi/tslint-config)
-- [Less](Less) - Less/CSS 코딩 스타일
-- [BEM](BEM) - BEM 코딩 스타일
-- [MariaDB(MySQL)](MariaDB(MySQL)) - DDL, DML 작성 규칙
+- [Less](Less.md) - Less/CSS 코딩 스타일
+- [BEM](BEM.md) - BEM 코딩 스타일
+- [MariaDB(MySQL)](MariaDB(MySQL).md) - DDL, DML 작성 규칙
 - [PHP](PHP)
 - [Python3](Python)
 
@@ -39,5 +39,5 @@
 
 - [Android](Android) - Kotlin, Java, XML 코딩 스타일
 - [iOS](iOS) - Swift, Objective-C 코딩 스타일
-- [Qt](Qt) - C++, XML 코딩 스타일
-- [CMS](CMS) - 내부 시스템 개발 가이드
+- [Qt](Qt.md) - C++, XML 코딩 스타일
+- [CMS](CMS.md) - 내부 시스템 개발 가이드
