@@ -4,7 +4,7 @@ Scala 코딩 스타일은 기본적으로 다음 두 문서를 참조한다.
  - [The Official Scala Style Guide](https://docs.scala-lang.org/style/)
  - [Databricks Scala Style Guide](https://github.com/databricks/scala-style-guide)
 
-두 문서의 코드 스타일 정의에 conflict가 있는 경우 [Databricks Scala Style Guide](https://github.com/databricks/scala-style-guide)를 우선적으로 따른다.
+두 문서의 코드 스타일 정의에 충돌이 있는 경우 [Databricks Scala Style Guide](https://github.com/databricks/scala-style-guide)를 우선적으로 따른다.
 
 ## Tools
 위 코드 스타일 가이드의 내용을 모두 숙지하고 있기는 현실적으로 어렵기 때문에, 최대한 적절한 도구의 도움을 받는 것을 원칙으로 한다.
@@ -28,16 +28,21 @@ Scala 코딩 스타일은 기본적으로 다음 두 문서를 참조한다.
 
 ## IDE(Integrated Development Environment)
 
-IDE로는 [IntelliJ IDEA](https://www.jetbrains.com/idea/)를 사용한다.
+IDE로는 [IntelliJ IDEA](https://www.jetbrains.com/idea/)를 사용을 권장한다.
 
-### Plugins
+<details><summary>IntelliJ에서 사용가능한 플러그인 및 적용방법</summary>
+<p>
+
+#### Plugins
+
 스칼라 코드 개발에 사용되는 플러그인들은 다음과 같다.
 
 - [Scala Plugin](https://plugins.jetbrains.com/plugin/1347-scala/)
 - [SBT Plugin](https://plugins.jetbrains.com/plugin/5007-sbt/)
 - [Scalafmt Plugin](https://plugins.jetbrains.com/plugin/8236-scalafmt/)
 
-### Scalafmt 적용
+#### Scalafmt 적용
+
 1. [Scalafmt Plugin](https://plugins.jetbrains.com/plugin/8236-scalafmt) 설치
 2. (선택) 프로젝트 root에 `.scalafmt.conf` 설정 파일 추가
 3. IntelliJ의 `Preferences` 메뉴에서 다음 항목 설정
@@ -48,12 +53,15 @@ IDE로는 [IntelliJ IDEA](https://www.jetbrains.com/idea/)를 사용한다.
         - `Imports` 탭에서 `Sort imports (for optimize imports)` 항목 체크
           - `scalastyle consistent` 선택
 
-### Scalastyle 활성화
+#### Scalastyle 활성화
+
 1. 프로젝트 root에 `scalastyle-config.xml` 설정 파일 추가
 2. IntelliJ의 `Preferences` 메뉴에서 다음 항목 설정
   - `Preferences > Editor > Inspections`
     - `Scala 항목 체크`
 
+</p>
+</details>
 
 ## 참고자료
 Scala 코딩 스타일 가이드
