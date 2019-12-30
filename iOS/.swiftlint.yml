@@ -17,34 +17,40 @@ disabled_rules:
   - unused_setter_value # Setter value is not used.
 
 opt_in_rules:
-  - anyobject_protocol # Prefer using AnyObject over class for class-only protocols.
-  - array_init # Prefer using Array(seq) over seq.map { $0 } to convert a sequence into an Array.
+  - anyobject_protocol # Prefer using `AnyObject` over class for class-only protocols.
+  - array_init # Prefer using `Array(seq)` over `seq.map { $0 }` to convert a sequence into an Array.
   - closure_end_indentation # Closure end should have the same indentation as the line that started it.
   - closure_spacing # Closure expressions should have a single space inside each brace.
   - collection_alignment # All elements in a collection literal should be vertically aligned
   - conditional_returns_on_newline # Conditional statements should always return on the next line.
-  - contains_over_first_not_nil # Prefer contains over first(where:) != nil and firstIndex(where:) != nil.
+  - contains_over_filter_count # Prefer `contains` over comparing `filter(where:).count` to `0`.
+  - contains_over_filter_is_empty # Prefer `contains` over using `filter(where:).isEmpty`
+  - contains_over_first_not_nil # Prefer `contains` over `first(where:) != nil` and `firstIndex(where:) != nil`.
+  - contains_over_range_nil_comparison # Prefer `contains` over `range(of:) != nil` and `range(of:) == nil`.
   - discouraged_object_literal # Prefer initializers over object literals.
-  - empty_count # Prefer checking isEmpty over comparing count to zero.
-  - empty_string # Prefer checking isEmpty over comparing string to an empty string literal.
-  - empty_xctest_method # Empty XCTest method should be avoided.
-  - explicit_init # Explicitly calling .init() should be avoided.
+  - empty_collection_literal # Prefer checking `isEmpty` over comparing collection to an empty array or dictionary literal.
+  - empty_count # Prefer checking `isEmpty` over comparing count to zero.
+  - empty_string # Prefer checking `isEmpty` over comparing string to an empty string literal.
+  - empty_xctest_method # Empty `XCTest` method should be avoided.
+  - explicit_init # Explicitly calling `.init()` should be avoided.
   - extension_access_modifier # Prefer to use extension access modifiers.
   - fallthrough # Fallthrough should be avoided.
-  - fatal_error_message # A fatalError call should have a message.
+  - fatal_error_message # A `fatalError` call should have a message.
   - file_header # Header comments should be consistent with project patterns.
-  - first_where # Prefer using .first(where:) over .filter { }.first in collections.
+  - first_where # Prefer using `.first(where:)` over `.filter { }.first` in collections.
+  - flatmap_over_map_reduce # Prefer `flatMap` over `map` followed by `reduce([], +)`.
   - function_default_parameter_at_end # Prefer to locate parameters with defaults toward the end of the parameter list.
+  - legacy_multiple # Prefer using the `isMultiple(of:)` function instead of using the remainder operator (`%`).
   - joined_default_parameter # Discouraged explicit usage of the default. separator.
-  - legacy_multiple # Prefer using the isMultiple(of:) function instead of using the remainder operator (%).
-  - last_where # Prefer using .last(where:) over .filter { }.last in collections.
-  - legacy_random # Prefer using type.random(in:) over legacy functions.
+  - last_where # Prefer using `.last(where:)` over `.filter { }.last` in collections.
+  - legacy_random # Prefer using `type.random(in:)` over legacy functions.
   - literal_expression_end_indentation # Array and dictionary literal end should have the same indentation as the line that started it.
   - lower_acl_than_parent # Ensure definitions have a lower access control level than their enclosing parent.
   - multiline_literal_brackets # Multiline literals should have their surrounding brackets in a new line.
   - prohibited_super_call # Some methods should not call super.
+  - redundant_type_annotation # Variables should not have redundant type annotation
   - sorted_imports # Imports should be sorted.
-  - toggle_bool # Prefer someBool.toggle() over someBool = !someBool.
+  - toggle_bool # Prefer `someBool.toggle()` over `someBool = !someBool`.
   - unneeded_parentheses_in_closure_argument # Parentheses are not needed when declaring closure arguments.
   - unowned_variable_capture # Prefer capturing references as weak to avoid potential crashes.
   - unused_import # All imported modules should be required to make the file compile.
@@ -58,7 +64,7 @@ custom_rules:
     regex: '^[\s]*(\|\||&&)'
   no_exclamation_not_operator:
     name: 'No exclamation not operator'
-    message: 'Force use .not() method instead of an exclamation mark prefix operator(!) for logical not.'
+    message: 'Force use `.not()` method instead of an exclamation mark prefix operator(`!`) for logical not.'
     regex: '(!(?:(?!DEBUG))\w+)'
 
 # Identifier names should only contain alphanumeric characters and start with a lowercase character or should only contain capital letters.

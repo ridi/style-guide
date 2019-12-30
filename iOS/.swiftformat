@@ -8,6 +8,7 @@
 --comments indent
 --decimalgrouping ignore
 --elseposition same-line
+--empty void
 --header ignore
 --hexgrouping ignore
 --hexliteralcase lowercase
@@ -16,12 +17,17 @@
 --indent 4
 --indentcase false
 --linebreaks lf
+--maxwidth 120
 --octalgrouping ignore
 --operatorfunc spaced
 --patternlet hoist
 --ranges no-space
 --semicolons never
+--self remove
+--selfrequired true
 --stripunusedargs closure-only
+--trailingclosures true
 --trimwhitespace nonblank-lines
 --wraparguments before-first
 --wrapcollections before-first
+--closingparen balanced
