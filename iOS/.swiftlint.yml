@@ -47,7 +47,6 @@ opt_in_rules:
   - multiline_literal_brackets # Multiline literals should have their surrounding brackets in a new line.
   - prohibited_super_call # Some methods should not call super.
   - redundant_type_annotation # Variables should not have redundant type annotation
-  - sorted_imports # Imports should be sorted.
   - toggle_bool # Prefer `someBool.toggle()` over `someBool = !someBool`.
   - unneeded_parentheses_in_closure_argument # Parentheses are not needed when declaring closure arguments.
   - unused_import # All imported modules should be required to make the file compile.
