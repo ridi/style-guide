@@ -59,10 +59,6 @@ custom_rules:
     name: 'Trailing logical operator'
     message: 'Leading logical operator should move to trailing.'
     regex: '^[\s]*(\|\||&&)'
-  no_exclamation_not_operator:
-    name: 'No exclamation not operator'
-    message: 'Force use `.not()` method instead of an exclamation mark prefix operator(`!`) for logical not.'
-    regex: '(!(?:(?!DEBUG))\w+)'
 
 # Identifier names should only contain alphanumeric characters and start with a lowercase character or should only contain capital letters.
 # In an exception to the above, variable names may start with a capital letter when they are declared static and immutable. Variable names should not be too long or too short.
