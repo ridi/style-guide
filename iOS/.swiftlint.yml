@@ -22,7 +22,6 @@ opt_in_rules:
   - closure_end_indentation # Closure end should have the same indentation as the line that started it.
   - closure_spacing # Closure expressions should have a single space inside each brace.
   - collection_alignment # All elements in a collection literal should be vertically aligned
-  - conditional_returns_on_newline # Conditional statements should always return on the next line.
   - contains_over_filter_count # Prefer `contains` over comparing `filter(where:).count` to `0`.
   - contains_over_filter_is_empty # Prefer `contains` over using `filter(where:).isEmpty`
   - contains_over_first_not_nil # Prefer `contains` over `first(where:) != nil` and `firstIndex(where:) != nil`.
@@ -33,7 +32,6 @@ opt_in_rules:
   - empty_string # Prefer checking `isEmpty` over comparing string to an empty string literal.
   - empty_xctest_method # Empty `XCTest` method should be avoided.
   - explicit_init # Explicitly calling `.init()` should be avoided.
-  - extension_access_modifier # Prefer to use extension access modifiers.
   - fallthrough # Fallthrough should be avoided.
   - fatal_error_message # A `fatalError` call should have a message.
   - file_header # Header comments should be consistent with project patterns.
@@ -52,7 +50,6 @@ opt_in_rules:
   - sorted_imports # Imports should be sorted.
   - toggle_bool # Prefer `someBool.toggle()` over `someBool = !someBool`.
   - unneeded_parentheses_in_closure_argument # Parentheses are not needed when declaring closure arguments.
-  - unowned_variable_capture # Prefer capturing references as weak to avoid potential crashes.
   - unused_import # All imported modules should be required to make the file compile.
   - unused_private_declaration # Private declarations should be referenced in that file.
   - vertical_parameter_alignment_on_call # Function parameters should be aligned vertically if they're in multiple lines in a method call.
@@ -95,3 +92,7 @@ type_name:
 # Limit vertical whitespace to a single empty line.
 vertical_whitespace:
   max_empty_lines: 2
+
+# Forbid "Created by" line in file header
+file_header:
+  forbidden_pattern: \b(Created by)\b
