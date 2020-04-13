@@ -107,6 +107,11 @@ Swift API Design Guidelines의 [Naming](https://swift.org/documentation/api-desi
 
 [Apple's Cocoa Coding Guidlines](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)의 Naming 항목들 참고.
 
+## Assets Catalog 네이밍
+
+- Asset 명에는 UpperCamelCase를 사용한다.
+- Asset의 파일명은 가능할 경우 아래의 리디 리소스 네이밍을 사용한다.
+
 ## 리디 리소스 네이밍
 
 - 소문자만 사용한다.
