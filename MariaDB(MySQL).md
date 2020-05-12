@@ -88,7 +88,7 @@ AWS RDS에서 MariaDB 슬레이브를 구축할 경우 10.1 버전 권장[\*]
   - 참고: http://dev.mysql.com/doc/refman/5.5/en/date-and-time-types.html
 
     `MySQL permits you to store dates where the day or month and day are zero in a DATE or DATETIME column. This is useful for applications that need to store birthdates for which you may not know the exact date. In this case, you simply store the date as '2009-00-00' or '2009-01-00'. If you store dates such as these, you should not expect to get correct results for functions such as DATE_SUB() or DATE_ADD() that require complete dates. To disallow zero month or day parts in dates, enable the NO_ZERO_IN_DATE SQL mode.`
-  - `VARCHAR(6)`을 사용할 경우 3byte(utf8) * 6 + 1byte(length) = 19byte 가 사용되나, `DATE`는 3byte만 사용.
+  - `VARCHAR(6)`을 사용할 경우 4byte(utf8mb4) * 6 + 1byte(length) = 24byte 가 사용되나, `DATE`는 4byte만 사용.
   - zero date는 사용하지 않음(from '2015-01-00' to '2015-01-01')
     - 날짜 라이브러리마다 zero date 를 처리하는 방법이 달라서 오류가능성 높음
 
