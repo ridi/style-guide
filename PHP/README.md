@@ -61,17 +61,6 @@
 - 삼항 연산자 사용
   - 연산자가 포함된 경우에는 반드시 괄호를 사용
     - `next_page = ($end_page === $total_pages) ? $end_page : ($end_page + 1);`
-- 긴 조건문
-  - `&&`, `||` 등은 가장 앞에 위치시킬 것
-  - 조건문이 여러줄일 경우 닫는 괄호와 brace는 새로운 줄에 위치시킬 것
-    ```php
-    if (someCondition1 !== null
-        && someCondition2 !== null
-        && someCondition3 !== null
-    ) {
-        /* ... */
-    }
-    ```
 
 #### 에러 제어 연산자
 - [Error Control Operator(`@`)](http://php.net/manual/en/language.operators.errorcontrol.php) 사용 금지
